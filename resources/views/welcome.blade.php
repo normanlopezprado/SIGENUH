@@ -13,8 +13,8 @@
                 <div class="col-lg-6">
                     <div class="auth-box card card-body m-0 h-100 border-0 justify-content-center">
                         <div class="mb-5 text-center">
-                            <h4 class="fw-normal">Bienvenido a <span class="fw-bold text-primary">SIGENHUH</span></h4>
-                            <p class="text-muted mb-0">Please enter your information to access your account.</p>
+                            <h4 class="fw-normal">Bienvenido a <span class="text-primary">SIGENHUH</span></h4>
+                            <p class="text-muted mb-0">Sistema de gestión nutricional hospitalaria.</p>
                         </div>
                         <form class="form-custom mt-10">
                             <div class="mb-5">

@@ -17,3 +17,6 @@ Route::get('/dashboard', function () {
 
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/login', [LoginController::class, 'login']);
+
+Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])
+    ->name('logout');

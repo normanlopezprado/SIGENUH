@@ -16,11 +16,12 @@
                             <h4 class="fw-normal">Bienvenido a <span class="fw-bold text-primary">SIGENUH</span></h4>
                             <p class="text-muted mb-0">Sistema de gestión nutricional hospitalaria.</p>
                         </div>
-                        <form class="form-custom mt-10">
+                        <form class="form-custom mt-10" method="POST" action="{{ route('login') }}" >
+                             @csrf
                             <div class="mb-5">
                                 <label class="form-label" for="login-email">Usuario<span class="text-danger ms-1">*</span>
                                 </label>
-                                <input type="text" class="form-control" id="login-email" placeholder="Ingresa tu usuario">
+                                <input type="text" class="form-control" id="login-email" name="email" required  placeholder="Ingresa tu usuario">
                             </div>
 
                             <div class="mb-5">
@@ -28,7 +29,7 @@
                                         class="text-danger ms-1">*</span></label>
                                 <div class="input-group">
                                     <input type="password" id="LoginPassword" class="form-control" name="password"
-                                           placeholder="Ingresa tu contraseña" data-visible="false">
+                                           required placeholder="Ingresa tu contraseña" data-visible="false">
                                     <a class="input-group-text bg-transparent toggle-password" href="javascript:;"
                                        data-target="password">
                                         <i class="ri-eye-off-line text-muted toggle-icon"></i>

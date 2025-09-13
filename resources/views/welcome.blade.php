@@ -52,7 +52,7 @@
                                     </span>
                                 </a>
                             </div>
-                              <button type="submit" class="btn btn-primary rounded-2 w-100">
+                              <button type="submit" class="btn btn-primary rounded-2 w-100 btn-loader">
                                     <span class="indicator-label">
                                         Iniciar sesión
                                     </span>
@@ -61,7 +61,6 @@
                                         <i class="ri-loader-2-fill"></i>
                                     </span>
                                 </button>
-                            </div>
                             <p class="mb-0 mt-5 text-muted text-center">
                                 Todavía no tienes una cuenta ?
                                 <a href="auth-signup" class="text-primary fw-medium text-decoraton-underline ms-1">

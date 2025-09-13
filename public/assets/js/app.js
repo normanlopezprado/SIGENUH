@@ -266,29 +266,21 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  function btnLoader() {
-    const btnLoader = document.querySelectorAll('.btn-loader');
-    btnLoader.forEach(button => {
-      button.addEventListener('click', function () {
-        const originalText = this.querySelector('.indicator-label').textContent;
-        const loadingText = this.getAttribute('data-loading-text');
+    function btnLoader() {
+        const forms = document.querySelectorAll('form');
+        forms.forEach(form => {
+            form.addEventListener('submit', function () {
+                const button = form.querySelector('.btn-loader');
+                if (button) {
+                    const loadingText = button.getAttribute('data-loading-text') || 'Cargando...';
 
-        // Show loading indicator and disable button
-        this.classList.add('loading');
-        this.querySelector('.indicator-label').textContent = loadingText;
-        this.disabled = true;
-
-        // Simulate an asynchronous operation (e.g., form submission)
-        setTimeout(() => {
-          // Hide loading indicator and reset button
-          this.classList.remove('loading');
-          this.querySelector('.indicator-label').textContent = originalText;
-          this.disabled = false;
-
-        }, 1500); // Simulated delay of 2 seconds
-      });
-    });
-  }
+                    button.classList.add('loading');
+                    button.querySelector('.indicator-label').textContent = loadingText;
+                    button.disabled = true;
+                }
+            });
+        });
+    }
 
   function needsValidation() {
     const needsValidation = document.getElementsByClassName('.needs-validation');

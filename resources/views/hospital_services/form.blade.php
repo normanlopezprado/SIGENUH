@@ -8,25 +8,16 @@
                         <div class="row g-4">
                             <div class="col-md-6">
                                 <label for="name" class="form-label">Nombre</label>
-                                <div class="form-icon">
-                                    <i class="ri-user-line text-muted"></i>
                                     <input type="text" class="form-control form-control-icon" id="name" name="name" value="{{ old('name', $service->name) }}" required>
                                     @error('name')<div class="text-danger">{{ $message }}</div>@enderror
-                                </div>
                             </div>
                             <div class="col-md-6">
                                 <label for="abbreviation" class="form-label">Abreviatura</label>
-                                <div class="form-icon">
-                                    <i class="ri-scissors-cut-line text-muted"></i>
-                                    <input type="text" class="form-control form-control-icon" id="abbreviation" name="abbreviation" placeholder="Abreviatura" value="{{ old('abbreviation', $service->abbreviation) }}">
-                                </div>
+                                    <input type="text" class="form-control form-control-icon" id="abbreviation" name="abbreviation" value="{{ old('abbreviation', $service->abbreviation) }}">
                             </div>
                             <div class="col-md-6">
                                 <label for="category" class="form-label">Categoría</label>
-                                <div class="form-icon">
-                                    <i class="ri-focus-line text-muted"></i>
-                                    <input type="text" class="form-control form-control-icon" id="category" name="category" placeholder="Categoría" value="{{ old('category', $service->category) }}" required>
-                                </div>
+                                    <input type="text" class="form-control form-control-icon" id="category" name="category" placeholder="Hombres / Mujeres / Menores" value="{{ old('category', $service->category) }}" required>
                             </div>
 
                             <div class="col-12">
@@ -34,7 +25,6 @@
                                 <div class="form-icon">
                                     <i class="ri-chat-1-line text-muted"></i>
                                     <textarea name="description" id="description" class="form-control form-control-icon" rows="3">{{ old('description', $service->description) }}</textarea>
-
                                 </div>
                             </div>
                             <div class="col-12">
@@ -52,9 +42,3 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-

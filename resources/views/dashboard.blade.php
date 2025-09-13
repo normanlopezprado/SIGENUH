@@ -1,9 +1,8 @@
 
 @extends('partials.layouts.master3')
 
-@section('title', 'Online Course Dashboard| Herozi - The Worlds Best Selling Bootstrap Admin & Dashboard Template by SRBThemes')
-@section('sub-title', 'Online Course' )
-@section('pagetitle', 'Dashboard')
+@section('title', 'Sistema de gestión nutricional Hospitalaria')
+@section('sub-title', 'Inicio' )
 @section('buttonTitle', 'Share')
 @section('link', '#!')
 
@@ -442,144 +441,144 @@
                 <div class="card-body h-500px" data-simplebar>
                     <table class="table align-middle table-borderless table-centered table-nowrap mb-0">
                         <thead class="text-muted bg-light bg-opacity-40">
-                        <tr>
-                            <th scope="col">Mentor Name</th>
-                            <th scope="col">Expertise</th>
-                            <th scope="col">Course</th>
-                            <th scope="col">Experience</th>
-                        </tr>
+                            <tr>
+                                <th scope="col">Mentor Name</th>
+                                <th scope="col">Expertise</th>
+                                <th scope="col">Course</th>
+                                <th scope="col">Experience</th>
+                            </tr>
                         </thead>
                         <tbody>
-                        <tr>
-                            <td>
-                                <div class="d-flex gap-2 align-items-center">
-                                    <img src="{{ asset('assets/images/avatar/avatar-2.jpg') }}" alt="Full Stack Development Course" class="avatar rounded-2">
-                                    <a href="#!" class="text-body">
-                                        <p class="mb-0 fw-medium text-truncate">Caleb Riv</p>
-                                    </a>
-                                </div>
-                            </td>
-                            <td>Web Designer</td>
-                            <td>110</td>
-                            <td>12 Years</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex gap-2 align-items-center">
-                                    <img src="{{ asset('assets/images/avatar/avatar-1.jpg') }}" alt="Web Design Course" class="avatar rounded-2">
-                                    <a href="#!" class="text-body">
-                                        <p class="mb-0 fw-medium text-truncate">Maria Stone</p>
-                                    </a>
-                                </div>
-                            </td>
-                            <td>Full Stack Developer</td>
-                            <td>98</td>
-                            <td>8 Years</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex gap-2 align-items-center">
-                                    <img src="{{ asset('assets/images/avatar/avatar-3.jpg') }}" alt="UI/UX Course" class="avatar rounded-2">
-                                    <a href="#!" class="text-body">
-                                        <p class="mb-0 fw-medium text-truncate">Samuel Lee</p>
-                                    </a>
-                                </div>
-                            </td>
-                            <td>UI/UX Designer</td>
-                            <td>120</td>
-                            <td>9 Years</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex gap-2 align-items-center">
-                                    <img src="{{ asset('assets/images/avatar/avatar-4.jpg') }}" alt="Data Science Course" class="avatar rounded-2">
-                                    <a href="#!" class="text-body">
-                                        <p class="mb-0 fw-medium text-truncate">Nina Patel</p>
-                                    </a>
-                                </div>
-                            </td>
-                            <td>Data Scientist</td>
-                            <td>75</td>
-                            <td>10 Years</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex gap-2 align-items-center">
-                                    <img src="{{ asset('assets/images/avatar/avatar-5.jpg') }}" alt="Marketing Course" class="avatar rounded-2">
-                                    <a href="#!" class="text-body">
-                                        <p class="mb-0 fw-medium text-truncate">John Carter</p>
-                                    </a>
-                                </div>
-                            </td>
-                            <td>Digital Marketer</td>
-                            <td>105</td>
-                            <td>6 Years</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex gap-2 align-items-center">
-                                    <img src="{{ asset('assets/images/avatar/avatar-7.jpg') }}" alt="Photography Course" class="avatar rounded-2">
-                                    <a href="#!" class="text-body">
-                                        <p class="mb-0 fw-medium text-truncate">Olivia Green</p>
-                                    </a>
-                                </div>
-                            </td>
-                            <td>Mobile App Developer</td>
-                            <td>90</td>
-                            <td>7 Years</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex gap-2 align-items-center">
-                                    <img src="{{ asset('assets/images/avatar/avatar-6.jpg') }}" alt="Mobile App Development Course" class="avatar rounded-2">
-                                    <a href="#!" class="text-body">
-                                        <p class="mb-0 fw-medium text-truncate">Lucas Gray</p>
-                                    </a>
-                                </div>
-                            </td>
-                            <td>Photographer</td>
-                            <td>60</td>
-                            <td>15 Years</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex gap-2 align-items-center">
-                                    <img src="{{ asset('assets/images/avatar/avatar-8.jpg') }}" alt="AI & Machine Learning Course" class="avatar rounded-2">
-                                    <a href="#!" class="text-body">
-                                        <p class="mb-0 fw-medium text-truncate">Ethan Black</p>
-                                    </a>
-                                </div>
-                            </td>
-                            <td>AI Engineer</td>
-                            <td>85</td>
-                            <td>11 Years</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex gap-2 align-items-center">
-                                    <img src="{{ asset('assets/images/avatar/avatar-9.jpg') }}" alt="SQL & Database Course" class="avatar rounded-2">
-                                    <a href="#!" class="text-body">
-                                        <p class="mb-0 fw-medium text-truncate">Sophia King</p>
-                                    </a>
-                                </div>
-                            </td>
-                            <td>Database Administrator</td>
-                            <td>130</td>
-                            <td>14 Years</td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <div class="d-flex gap-2 align-items-center">
-                                    <img src="{{ asset('assets/images/avatar/avatar-10.jpg') }}" alt="Blockchain Development Course" class="avatar rounded-2">
-                                    <a href="#!" class="text-body">
-                                        <p class="mb-0 fw-medium text-truncate">Daniel Scott</p>
-                                    </a>
-                                </div>
-                            </td>
-                            <td>Blockchain Developer</td>
-                            <td>50</td>
-                            <td>5 Years</td>
-                        </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <img src="{{ asset('assets/images/avatar/avatar-2.jpg') }}" alt="Full Stack Development Course" class="avatar rounded-2">
+                                        <a href="#!" class="text-body">
+                                            <p class="mb-0 fw-medium text-truncate">Caleb Riv</p>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>Web Designer</td>
+                                <td>110</td>
+                                <td>12 Years</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <img src="{{ asset('assets/images/avatar/avatar-1.jpg') }}" alt="Web Design Course" class="avatar rounded-2">
+                                        <a href="#!" class="text-body">
+                                            <p class="mb-0 fw-medium text-truncate">Maria Stone</p>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>Full Stack Developer</td>
+                                <td>98</td>
+                                <td>8 Years</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <img src="{{ asset('assets/images/avatar/avatar-3.jpg') }}" alt="UI/UX Course" class="avatar rounded-2">
+                                        <a href="#!" class="text-body">
+                                            <p class="mb-0 fw-medium text-truncate">Samuel Lee</p>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>UI/UX Designer</td>
+                                <td>120</td>
+                                <td>9 Years</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <img src="{{ asset('assets/images/avatar/avatar-4.jpg') }}" alt="Data Science Course" class="avatar rounded-2">
+                                        <a href="#!" class="text-body">
+                                            <p class="mb-0 fw-medium text-truncate">Nina Patel</p>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>Data Scientist</td>
+                                <td>75</td>
+                                <td>10 Years</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <img src="{{ asset('assets/images/avatar/avatar-5.jpg') }}" alt="Marketing Course" class="avatar rounded-2">
+                                        <a href="#!" class="text-body">
+                                            <p class="mb-0 fw-medium text-truncate">John Carter</p>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>Digital Marketer</td>
+                                <td>105</td>
+                                <td>6 Years</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <img src="{{ asset('assets/images/avatar/avatar-7.jpg') }}" alt="Photography Course" class="avatar rounded-2">
+                                        <a href="#!" class="text-body">
+                                            <p class="mb-0 fw-medium text-truncate">Olivia Green</p>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>Mobile App Developer</td>
+                                <td>90</td>
+                                <td>7 Years</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <img src="{{ asset('assets/images/avatar/avatar-6.jpg') }}" alt="Mobile App Development Course" class="avatar rounded-2">
+                                        <a href="#!" class="text-body">
+                                            <p class="mb-0 fw-medium text-truncate">Lucas Gray</p>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>Photographer</td>
+                                <td>60</td>
+                                <td>15 Years</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <img src="{{ asset('assets/images/avatar/avatar-8.jpg') }}" alt="AI & Machine Learning Course" class="avatar rounded-2">
+                                        <a href="#!" class="text-body">
+                                            <p class="mb-0 fw-medium text-truncate">Ethan Black</p>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>AI Engineer</td>
+                                <td>85</td>
+                                <td>11 Years</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <img src="{{ asset('assets/images/avatar/avatar-9.jpg') }}" alt="SQL & Database Course" class="avatar rounded-2">
+                                        <a href="#!" class="text-body">
+                                            <p class="mb-0 fw-medium text-truncate">Sophia King</p>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>Database Administrator</td>
+                                <td>130</td>
+                                <td>14 Years</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <div class="d-flex gap-2 align-items-center">
+                                        <img src="{{ asset('assets/images/avatar/avatar-10.jpg') }}" alt="Blockchain Development Course" class="avatar rounded-2">
+                                        <a href="#!" class="text-body">
+                                            <p class="mb-0 fw-medium text-truncate">Daniel Scott</p>
+                                        </a>
+                                    </div>
+                                </td>
+                                <td>Blockchain Developer</td>
+                                <td>50</td>
+                                <td>5 Years</td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -801,418 +800,7 @@
             </div>
         </div>
 
-        <div class="col-12 col-md-6 col-xl-4">
-            <div class="card h-100 mb-0 overflow-hidden">
-                <div class="card-header d-flex flex-wrap align-items-center justify-content-between gap-3">
-                    <h6 class="card-title mb-0 flex-grow-1">Upcoming Events</h6>
-                    <button class="btn btn-light btn-sm flex-shrink-0">Edit</button>
-                </div>
-                <div class="card-body h-500px" data-simplebar>
-                    <ul class="list-group fs-13 fw-medium list-group-flush">
-                        <li class="list-group-item d-flex gap-3 hstack rounded px-0 pt-0">
-                            <div class="p-2 bg-primary-subtle rounded-3 text-center flex-shrink-0">
-                                <h5 class="mb-0">22</h5>
-                                <p class="text-uppercase fs-12 mb-0">dec</p>
-                            </div>
-                            <div class="d-flex gap-3 align-items-center flex-grow-1 overflow-hidden">
-                                <div class="flex-grow-1 overflow-hidden">
-                                    <a href="#!" class="fs-6 fw-bold mb-1 text-truncate text-body d-block">Advanced Data Science Techniques</a>
-                                    <span class="text-muted fw-medium d-block text-truncate fs-12">
-                                        <i class="ri-time-line align-bottom me-1"></i>Starts at 2:00 PM</span>
-                                </div>
-                                <button type="button" class="btn btn-light-primary btn-sm flex-shrink-0">Join Now</button>
-                            </div>
-                        </li>
-                        <li class="list-group-item d-flex gap-3 hstack rounded px-0">
-                            <div class="p-2 bg-primary-subtle rounded-3 text-center flex-shrink-0">
-                                <h5 class="mb-0">29</h5>
-                                <p class="text-uppercase fs-12 mb-0">dec</p>
-                            </div>
-                            <div class="d-flex gap-3 align-items-center flex-grow-1 overflow-hidden">
-                                <div class="flex-grow-1 overflow-hidden">
-                                    <a href="#!" class="fs-6 fw-bold mb-1 text-truncate text-body d-block">Machine Learning Basics</a>
-                                    <span class="text-muted fw-medium d-block text-truncate fs-12">
-                                        <i class="ri-time-line align-bottom me-1"></i>Starts at 1:00 PM</span>
-                                </div>
-                                <button type="button" class="btn btn-light-primary btn-sm flex-shrink-0">Join Now</button>
-                            </div>
-                        </li>
-                        <li class="list-group-item d-flex gap-3 hstack rounded px-0">
-                            <div class="p-2 bg-primary-subtle rounded-3 text-center flex-shrink-0">
-                                <h5 class="mb-0">05</h5>
-                                <p class="text-uppercase fs-12 mb-0">jan</p>
-                            </div>
-                            <div class="d-flex gap-3 align-items-center flex-grow-1 overflow-hidden">
-                                <div class="flex-grow-1 overflow-hidden">
-                                    <a href="#!" class="fs-6 fw-bold mb-1 text-truncate text-body d-block">Data Visualization Techniques</a>
-                                    <span class="text-muted fw-medium d-block text-truncate fs-12">
-                                        <i class="ri-time-line align-bottom me-1"></i>Starts at 3:00 PM</span>
-                                </div>
-                                <button type="button" class="btn btn-light-primary btn-sm flex-shrink-0">Join Now</button>
-                            </div>
-                        </li>
-                        <li class="list-group-item d-flex gap-3 hstack rounded px-0">
-                            <div class="p-2 bg-primary-subtle rounded-3 text-center flex-shrink-0">
-                                <h5 class="mb-0">12</h5>
-                                <p class="text-uppercase fs-12 mb-0">jan</p>
-                            </div>
-                            <div class="d-flex gap-3 align-items-center flex-grow-1 overflow-hidden">
-                                <div class="flex-grow-1 overflow-hidden">
-                                    <a href="#!" class="fs-6 fw-bold mb-1 text-truncate text-body d-block">Deep Learning Fundamentals</a>
-                                    <span class="text-muted fw-medium d-block text-truncate fs-12">
-                                        <i class="ri-time-line align-bottom me-1"></i>Starts at 11:00 AM</span>
-                                </div>
-                                <button type="button" class="btn btn-light-primary btn-sm flex-shrink-0">Join Now</button>
-                            </div>
-                        </li>
-                        <li class="list-group-item d-flex gap-3 hstack rounded px-0">
-                            <div class="p-2 bg-primary-subtle rounded-3 text-center flex-shrink-0">
-                                <h5 class="mb-0">19</h5>
-                                <p class="text-uppercase fs-12 mb-0">jan</p>
-                            </div>
-                            <div class="d-flex gap-3 align-items-center flex-grow-1 overflow-hidden">
-                                <div class="flex-grow-1 overflow-hidden">
-                                    <a href="#!" class="fs-6 fw-bold mb-1 text-truncate text-body d-block">Cloud Computing Essentials</a>
-                                    <span class="text-muted fw-medium d-block text-truncate fs-12">
-                                        <i class="ri-time-line align-bottom me-1"></i>Starts at 4:00 PM</span>
-                                </div>
-                                <button type="button" class="btn btn-light-primary btn-sm flex-shrink-0">Join Now</button>
-                            </div>
-                        </li>
-                        <li class="list-group-item d-flex gap-3 hstack rounded px-0">
-                            <div class="p-2 bg-primary-subtle rounded-3 text-center flex-shrink-0">
-                                <h5 class="mb-0">26</h5>
-                                <p class="text-uppercase fs-12 mb-0">jan</p>
-                            </div>
-                            <div class="d-flex gap-3 align-items-center flex-grow-1 overflow-hidden">
-                                <div class="flex-grow-1 overflow-hidden">
-                                    <a href="#!" class="fs-6 fw-bold mb-1 text-truncate text-body d-block">Introduction to Artificial Intelligence</a>
-                                    <span class="text-muted fw-medium d-block text-truncate fs-12">
-                                        <i class="ri-time-line align-bottom me-1"></i>Starts at 5:00 PM</span>
-                                </div>
-                                <button type="button" class="btn btn-light-primary btn-sm flex-shrink-0">Join Now</button>
-                            </div>
-                        </li>
-                        <li class="list-group-item d-flex gap-3 hstack rounded px-0 pb-0">
-                            <div class="p-2 bg-primary-subtle rounded-3 text-center flex-shrink-0">
-                                <h5 class="mb-0">02</h5>
-                                <p class="text-uppercase fs-12 mb-0">feb</p>
-                            </div>
-                            <div class="d-flex gap-3 align-items-center flex-grow-1 overflow-hidden">
-                                <div class="flex-grow-1 overflow-hidden">
-                                    <a href="#!" class="fs-6 fw-bold mb-1 text-truncate text-body d-block">Ethics in Data Science</a>
-                                    <span class="text-muted fw-medium d-block text-truncate fs-12">
-                                        <i class="ri-time-line align-bottom me-1"></i>Starts at 10:00 AM</span>
-                                </div>
-                                <button type="button" class="btn btn-light-primary btn-sm flex-shrink-0">Join Now</button>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-xl-4">
-            <div class="card h-100 mb-0 overflow-hidden">
-                <div class="card-header d-flex flex-wrap align-items-center justify-content-between gap-3">
-                    <h5 class="card-title mb-0">Recent activity</h5>
-                    <div class="dropdown flex-shrink-0">
-                        <a class="text-reset dropdown-toggle" href="#!" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="text-muted text-uppercase fs-12"><i class="ri-settings-4-line align-bottom me-1"></i>Options</span>
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#!">Sort by Date</a>
-                            <a class="dropdown-item" href="#!">Sort by User</a>
-                            <a class="dropdown-item" href="#!">Filter by Status</a>
-                            <a class="dropdown-item delete-item" href="#!">Clear All</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-4 h-500px" data-simplebar>
-                    <ul class="timeline-box mb-0">
-                        <li class="timeline-section">
-                            <div class="position-relative timeline-icon h-max">
-                                <div class="border-0 text-bg-primary avatar-item avatar">AC</div>
-                            </div>
-                            <div class="timeline-content p-0">
-                                <div class="d-flex flex-column gap-1">
-                                    <h5 class="mb-0 fw-medium">Admin Console</h5>
-                                    <p class="mb-0 text-muted fs-12">09:30 AM</p>
-                                </div>
-                                <div class="mt-1 d-inline-flex flex-wrap align-items-center column-gap-2 text-muted">
-                                    <span>created a new course</span>
-                                    <span class="fw-semibold text-body">"Advanced Machine Learning"</span>
-                                    <span>with a batch of</span>
-                                    <span class="fw-semibold text-body">30 students.</span>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="timeline-section">
-                            <div class="position-relative timeline-icon h-max">
-                                <img src="{{ asset('assets/images/avatar/avatar-2.jpg') }}" class="border-0 avatar-item avatar" alt="user Image">
-                            </div>
-                            <div class="timeline-content p-0">
-                                <div class="d-flex flex-column gap-1">
-                                    <h5 class="mb-0 fw-medium">John Doe</h5>
-                                    <p class="mb-0 text-muted fs-12">08:15 AM</p>
-                                </div>
-                                <div class="mt-1 d-inline-flex flex-wrap align-items-center column-gap-2 text-muted">
-                                    <span>updated the schedule for the course</span>
-                                    <span class="fw-semibold text-body">"Web Development Basics".</span>
-                                </div>
-                                <div class="p-4 fs-13 rounded-4 bg-light bg-opacity-30 mt-3">The next session has been moved to <strong>Monday, 10:00 AM</strong>. Please update the calendar accordingly.</div>
-                            </div>
-                        </li>
-
-                        <li class="timeline-section">
-                            <div class="position-relative timeline-icon h-max">
-                                <div class="border-0 text-bg-light avatar-item avatar"><i class="ri-user-add-line"></i></div>
-                            </div>
-                            <div class="timeline-content p-0">
-                                <div class="d-flex flex-column gap-1">
-                                    <h5 class="mb-0 fw-medium">Sarah Johnson</h5>
-                                    <p class="mb-0 text-muted fs-12">07:45 AM</p>
-                                </div>
-                                <div class="mt-1 d-inline-flex flex-wrap align-items-center column-gap-2 text-muted">
-                                    <span>added new instructors to</span>
-                                    <span class="fw-semibold text-body">"Data Analytics Program".</span>
-                                </div>
-                                <div class="badge bg-light d-inline-flex align-items-center gap-1 mt-2">
-                                    <span class="bullet d-flex align-items-center bg-success flex-shrink-0"></span>
-                                    <span class="fw-semibold text-body">Dr. Emily Carter</span>
-                                </div>
-                                <div class="badge bg-light d-inline-flex align-items-center gap-1">
-                                    <span class="bullet d-flex align-items-center bg-primary flex-shrink-0"></span>
-                                    <span class="fw-semibold text-body">Mr. Robert James</span>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="timeline-section">
-                            <div class="position-relative timeline-icon h-max">
-                                <div class="border-0 text-bg-light avatar-item avatar"><i class="ri-notification-3-line"></i></div>
-                            </div>
-                            <div class="timeline-content p-0">
-                                <div class="d-flex flex-column gap-1">
-                                    <h5 class="mb-0 fw-medium">System Notification</h5>
-                                    <p class="mb-0 text-muted fs-12">06:30 AM</p>
-                                </div>
-                                <div class="mt-1 d-inline-flex flex-wrap align-items-center column-gap-2 text-muted">
-                                    <span>An announcement was sent to all students for</span>
-                                    <span class="fw-semibold text-body">"Semester End Examination Schedule".</span>
-                                </div>
-                            </div>
-                        </li>
-
-                        <li class="timeline-section">
-                            <div class="position-relative timeline-icon h-max">
-                                <img src="{{ asset('assets/images/avatar/avatar-3.jpg') }}" class="border-0 avatar-item avatar" alt="user Image">
-                            </div>
-                            <div class="timeline-content p-0">
-                                <div class="d-flex flex-column gap-1">
-                                    <h5 class="mb-0 fw-medium">David White</h5>
-                                    <p class="mb-0 text-muted fs-12">05:10 AM</p>
-                                </div>
-                                <div class="mt-1 d-inline-flex flex-wrap align-items-center column-gap-2 text-muted">
-                                    <span>reported an issue with</span>
-                                    <span class="fw-semibold text-body">"Quiz Submission Module".</span>
-                                </div>
-                                <div class="p-4 fs-13 rounded-4 bg-light bg-opacity-30 mt-3">The submissions are not being saved properly. It seems to be a bug with the latest update. Please check and resolve.</div>
-                            </div>
-                        </li>
-
-                        <li class="timeline-section pb-0">
-                            <div class="position-relative timeline-icon h-max">
-                                <div class="border-0 text-bg-info avatar-item avatar">RG</div>
-                            </div>
-                            <div class="timeline-content p-0">
-                                <div class="d-flex flex-column gap-1">
-                                    <h5 class="mb-0 fw-medium">Rachel Green</h5>
-                                    <p class="mb-0 text-muted fs-12">03:00 AM</p>
-                                </div>
-                                <div class="mt-1 d-inline-flex flex-wrap align-items-center column-gap-2 text-muted">
-                                    <span>removed inactive users from</span>
-                                    <span class="fw-semibold text-body">"Marketing 101".</span>
-                                    <span>Total removed:</span>
-                                    <span class="fw-semibold text-body">12 users.</span>
-                                </div>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-12 col-md-6 col-xl-4">
-            <div class="card h-100 mb-0">
-                <div class="card-header d-flex flex-wrap align-items-center justify-content-between gap-3">
-                    <h5 class="card-title mb-0">My Tasks</h5>
-                    <div class="dropdown flex-shrink-0">
-                        <a class="text-reset dropdown-toggle" href="#!" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="text-muted text-uppercase fs-12">All Tasks</span>
-                        </a>
-                        <div class="dropdown-menu">
-                            <a class="dropdown-item" href="#!">All Tasks</a>
-                            <a class="dropdown-item" href="#!">Completed </a>
-                            <a class="dropdown-item" href="#!">Inprogress</a>
-                            <a class="dropdown-item" href="#!">Pending</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="card-body p-0 h-500px" data-simplebar>
-                    <ul class="list-group list-group-flush">
-                        <li class="list-group-item border-0">
-                            <div class="hstack gap-3">
-                                <div class="form-check p-0 m-0 flex-shrink-0">
-                                    <input type="checkbox" class="form-check-input ms-0" id="task_a" checked>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <label class="form-check-label mb-0" for="task_a">Finalize project proposal and send to clients</label>
-                                    <p class="text-muted fs-12 mb-0">1 Feb, 2025</p>
-                                </div>
-                                <span class="badge bg-success-subtle text-success flex-shrink-0">Completed</span>
-                            </div>
-                        </li>
-                        <li class="list-group-item border-0">
-                            <div class="hstack gap-3">
-                                <div class="form-check p-0 m-0 flex-shrink-0">
-                                    <input type="checkbox" class="form-check-input ms-0" id="task_b">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <label class="form-check-label mb-0" for="task_b">Schedule weekly check-in with development team</label>
-                                    <p class="text-muted fs-12 mb-0">3 Feb, 2025</p>
-                                </div>
-                                <span class="badge bg-warning-subtle text-warning flex-shrink-0">In Progress</span>
-                            </div>
-                        </li>
-                        <li class="list-group-item border-0">
-                            <div class="hstack gap-3">
-                                <div class="form-check p-0 m-0 flex-shrink-0">
-                                    <input type="checkbox" class="form-check-input ms-0" id="task_c">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <label class="form-check-label mb-0" for="task_c">Review website analytics and update strategy</label>
-                                    <p class="text-muted fs-12 mb-0">5 Feb, 2025</p>
-                                </div>
-                                <span class="badge bg-secondary-subtle flex-shrink-0">Pending</span>
-                            </div>
-                        </li>
-                        <li class="list-group-item border-0">
-                            <div class="hstack gap-3">
-                                <div class="form-check p-0 m-0 flex-shrink-0">
-                                    <input type="checkbox" class="form-check-input ms-0" id="task_d" checked>
-                                </div>
-                                <div class="flex-grow-1">
-                                    <label class="form-check-label mb-0" for="task_d">Update product pricing on website</label>
-                                    <p class="text-muted fs-12 mb-0">7 Feb, 2025</p>
-                                </div>
-                                <span class="badge bg-warning-subtle text-warning flex-shrink-0">In Progress</span>
-                            </div>
-                        </li>
-                        <li class="list-group-item border-0">
-                            <div class="hstack gap-3">
-                                <div class="form-check p-0 m-0 flex-shrink-0">
-                                    <input type="checkbox" class="form-check-input ms-0" id="task_e">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <label class="form-check-label mb-0" for="task_e">Prepare meeting agenda for next executive meeting</label>
-                                    <p class="text-muted fs-12 mb-0">8 Feb, 2025</p>
-                                </div>
-                                <span class="badge bg-warning-subtle text-warning flex-shrink-0">In Progress</span>
-                            </div>
-                        </li>
-                        <li class="list-group-item border-0">
-                            <div class="hstack gap-3">
-                                <div class="form-check p-0 m-0 flex-shrink-0">
-                                    <input type="checkbox" class="form-check-input ms-0" id="task_f">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <label class="form-check-label mb-0" for="task_f">Design promotional material for new product launch</label>
-                                    <p class="text-muted fs-12 mb-0">10 Feb, 2025</p>
-                                </div>
-                                <span class="badge bg-warning-subtle text-warning flex-shrink-0">In Progress</span>
-                            </div>
-                        </li>
-
-                        <!-- New Tasks -->
-                        <li class="list-group-item border-0">
-                            <div class="hstack gap-3">
-                                <div class="form-check p-0 m-0 flex-shrink-0">
-                                    <input type="checkbox" class="form-check-input ms-0" id="task_g">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <label class="form-check-label mb-0" for="task_g">Conduct market research for upcoming product</label>
-                                    <p class="text-muted fs-12 mb-0">12 Feb, 2025</p>
-                                </div>
-                                <span class="badge bg-secondary-subtle flex-shrink-0">Pending</span>
-                            </div>
-                        </li>
-                        <li class="list-group-item border-0">
-                            <div class="hstack gap-3">
-                                <div class="form-check p-0 m-0 flex-shrink-0">
-                                    <input type="checkbox" class="form-check-input ms-0" id="task_h">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <label class="form-check-label mb-0" for="task_h">Prepare and send monthly newsletter</label>
-                                    <p class="text-muted fs-12 mb-0">15 Feb, 2025</p>
-                                </div>
-                                <span class="badge bg-secondary-subtle flex-shrink-0">Pending</span>
-                            </div>
-                        </li>
-                        <li class="list-group-item border-0">
-                            <div class="hstack gap-3">
-                                <div class="form-check p-0 m-0 flex-shrink-0">
-                                    <input type="checkbox" class="form-check-input ms-0" id="task_i">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <label class="form-check-label mb-0" for="task_i">Organize team-building event for the company</label>
-                                    <p class="text-muted fs-12 mb-0">18 Feb, 2025</p>
-                                </div>
-                                <span class="badge bg-warning-subtle text-warning flex-shrink-0">In Progress</span>
-                            </div>
-                        </li>
-                        <li class="list-group-item border-0">
-                            <div class="hstack gap-3">
-                                <div class="form-check p-0 m-0 flex-shrink-0">
-                                    <input type="checkbox" class="form-check-input ms-0" id="task_j">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <label class="form-check-label mb-0" for="task_j">Update the team on the latest project developments</label>
-                                    <p class="text-muted fs-12 mb-0">20 Feb, 2025</p>
-                                </div>
-                                <span class="badge bg-secondary-subtle flex-shrink-0">Pending</span>
-                            </div>
-                        </li>
-                        <li class="list-group-item border-0">
-                            <div class="hstack gap-3">
-                                <div class="form-check p-0 m-0 flex-shrink-0">
-                                    <input type="checkbox" class="form-check-input ms-0" id="task_k">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <label class="form-check-label mb-0" for="task_k">Launch new marketing campaign for Q2</label>
-                                    <p class="text-muted fs-12 mb-0">22 Feb, 2025</p>
-                                </div>
-                                <span class="badge bg-secondary-subtle flex-shrink-0">Pending</span>
-                            </div>
-                        </li>
-                        <li class="list-group-item border-0">
-                            <div class="hstack gap-3">
-                                <div class="form-check p-0 m-0 flex-shrink-0">
-                                    <input type="checkbox" class="form-check-input ms-0" id="task_l">
-                                </div>
-                                <div class="flex-grow-1">
-                                    <label class="form-check-label mb-0" for="task_l">Finalize Q1 financial report</label>
-                                    <p class="text-muted fs-12 mb-0">25 Feb, 2025</p>
-                                </div>
-                                <span class="badge bg-warning-subtle text-warning flex-shrink-0">In Progress</span>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
+    
     </div>
 @endsection
 

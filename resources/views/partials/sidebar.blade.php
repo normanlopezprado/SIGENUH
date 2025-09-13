@@ -2,9 +2,9 @@
 <aside class="app-sidebar">
     <!-- START BRAND LOGO -->
     <div class="app-sidebar-logo px-6 justify-content-center align-items-center">
-        <a href="index">
+        <a href="dashboard">
             <img height="35" class="app-sidebar-logo-default" alt="Logo" src="{{ asset('assets/images/light-log.png') }}">
-            <img height="40" class="app-sidebar-logo-minimize" alt="Logo" src="{{ asset('assets/images/Favico.png') }}">
+            <img height="40" class="app-sidebar-logo-minimize" alt="Logo" src="{{ asset('assets/images/16650.png') }}">
         </a>
     </div>
     <!-- END BRAND LOGO -->
@@ -20,9 +20,9 @@
     <div class="offcanvas-header hstack border-bottom">
         <!-- START BRAND LOGO -->
         <div class="app-sidebar-logo">
-            <a href="index">
+            <a href="dashboard">
                 <img height="35" class="app-sidebar-logo-default h-25px" alt="Logo" src="{{ asset('assets/images/light-log.png') }}">">
-                <img height="40" class="app-sidebar-logo-minimize" alt="Logo" src="{{ asset('assets/images/Favico.png') }}">">
+                <img height="40" class="app-sidebar-logo-minimize" alt="Logo" src="{{ asset('assets/images/16650.png') }}">">
             </a>
         </div>
         <button type="button" class="btn-close bg-transparent" data-bs-dismiss="offcanvas" aria-label="Close">

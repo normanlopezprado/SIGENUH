@@ -19,7 +19,6 @@
                 <table class="data-table-basic table-hover align-middle table table-nowrap w-100">
                     <thead class="bg-light bg-opacity-30">
                     <tr>
-                        <th>ID</th>
                         <th>Nombre</th>
                         <th>Abrev.</th>
                         <th>Categoría</th>
@@ -30,7 +29,6 @@
                     <tbody>
                     @forelse($services as $s)
                         <tr>
-                            <td>{{ $s->id }}</td>
                             <td><a href="{{ route('hospital-services.show', $s) }}">{{ $s->name }}</a></td>
                             <td>{{ $s->abbreviation }}</td>
                             <td>{{ $s->category }}</td>
@@ -62,10 +60,10 @@
 @section('js')
 
     <!-- Datatable js -->
-    <script src="https://cdn.datatables.net/buttons/2.2.2/js/dataTables.buttons.min.js"></script>
+
     <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.print.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.2/js/buttons.html5.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+
 
     <!-- Datatable init -->
     <script src="{{ asset('assets/js/table/datatable.init.js') }}"></script>

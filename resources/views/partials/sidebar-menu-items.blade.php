@@ -23,10 +23,10 @@
         </a>
         <ul class="slide-menu" role="menu">
             <li class="slide">
-                <a href="hospital-services" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Gestionar</a>
+                <a href="../hospital-services" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Gestionar</a>
             </li>
             <li class="slide">
-                <a href="hospital-services/create" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Nuevo</a>
+                <a href="../hospital-services/create" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Nuevo</a>
             </li>
         </ul>
     </li>

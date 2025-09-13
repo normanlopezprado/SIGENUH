@@ -173,7 +173,7 @@
                       </a>
                     </div>
                     <div class="col">
-                      <a class="dropdown-icon-item" href="../index">
+                      <a class="dropdown-icon-item" href="../dashboard">
                         <div class="avatar border-0 avatar-item bg-light mx-auto mb-2">
                           <i class="ri-shopping-cart-line align-middle text-muted"></i>
                         </div>

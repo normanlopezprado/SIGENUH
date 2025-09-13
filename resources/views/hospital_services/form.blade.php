@@ -1,17 +1,3 @@
-@extends('partials.layouts.master2')
-
-@section('title', 'sigenhuh')
-@section('sub-title', 'Editar Servicio' )
-@section('pagetitle', 'Home')
-@section('buttonTitle', 'Share')
-@section('modalTarget', 'shareModal')
-
-@section('css')
-    <link rel="stylesheet" href="{{ asset('assets/libs/air-datepicker/air-datepicker.css') }}">
-@endsection
-
-@section('content')
-
     <div class="row g-4">
         <div class="col-12 col-lg-6">
             <div class="card h-100 mb-0">
@@ -19,7 +5,6 @@
                     <h5 class="card-title mb-0">Servicios</h5>
                 </div>
                 <div class="card-body">
-                    <form>
                         <div class="row g-4">
                             <div class="col-md-6">
                                 <label for="name" class="form-label">Nombre</label>
@@ -53,35 +38,21 @@
                                 </div>
                             </div>
                             <div class="col-12">
-                                <div class="form-check mb-4">.
+                                <div class="form-check mb-4">
                                     <input type="hidden" name="status" value="0">
-                                    <input type="checkbox" name="status" class="form-check-input" value="1"
+                                    <input type="checkbox" id="status" name="status" class="form-check-input" value="1"
                                         {{ old('status', $service->status) ? 'checked' : '' }}>
-                                    <label class="form-check-label">Activo</label>
+                                    <label for="status" class="form-check-label">Activo</label>
                                 </div>
                             </div>
                         </div>
-                        <button class="btn btn-primary">Guardar</button>
-                        <a href="{{ route('hospital-services.index') }}" class="btn btn-secondary">Cancelar</a>
-                    </form>
+                    <button type="submit" class="btn btn-primary">Guardar</button>
+                    <a href="{{ route('hospital-services.index') }}" class="btn btn-secondary">Cancelar</a>
                 </div>
             </div>
         </div>
-
     </div>
-@endsection
 
-@section('js')
-
-    <!-- Air Datepicker js -->
-    <script src="{{ asset('assets/libs/air-datepicker/air-datepicker.js') }}"></script>
-
-    <!-- Form-layout init -->
-    <script src="{{ asset('assets/js/form/form-layout.init.js') }}"></script>
-
-    <!-- App js -->
-    <script type="module" src="{{ asset('assets/js/app.js') }}"></script>
-@endsection
 
 
 

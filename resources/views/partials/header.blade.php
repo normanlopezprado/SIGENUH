@@ -186,24 +186,6 @@
               </div>
             </div>
           </div>
-          <!-- Theme -->
-          <div class="dropdown features-dropdown d-none d-sm-block">
-            <button type="button" class="btn icon-btn btn-text-primary rounded-circle" data-bs-toggle="dropdown" aria-expanded="false">
-              <span class="visually-hidden">Light or Dark Mode Switch</span>
-              <i class="ri-sun-line fs-20"></i>
-            </button>
-            <div class="dropdown-menu dropdown-menu-end header-language-scrollable" data-simplebar>
-              <div class="dropdown-item cursor-pointer" id="light-theme">
-                <span class="hstack gap-2 align-middle"><i class="ri-sun-line"></i>Light</span>
-              </div>
-              <div class="dropdown-item cursor-pointer" id="dark-theme">
-                <span class="hstack gap-2 align-middle"><i class="ri-moon-clear-line"></i>Dark</span>
-              </div>
-              <div class="dropdown-item cursor-pointer" id="system-theme">
-                <span class="hstack gap-2 align-middle"><i class="ri-computer-line"></i>System</span>
-              </div>
-            </div>
-          </div>
           <!-- Fullscreen -->
           <button type="button" id="fullscreen-button" class="btn icon-btn btn-text-primary rounded-circle custom-toggle d-none d-sm-block" aria-pressed="false">
             <span class="visually-hidden">Toggle Fullscreen</span>
@@ -220,7 +202,7 @@
           <button type="button" id="accountNavbarDropdown" class="btn profile-btn shadow-none px-0 hstack gap-0 gap-sm-3" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-dropdown-animation>
             <span class="position-relative">
               <span class="avatar-item avatar overflow-hidden">
-                <img class="img-fluid" src="{{ asset('assets/images/avatar/avatar-1.jpg') }}" alt="avatar image">
+                <img class="img-fluid" src="{{ asset('assets/images/avatar/13881101.jpg') }}" alt="avatar image">
               </span>
               <span class="position-absolute border-2 border border-white h-12px w-12px rounded-circle bg-success end-0 bottom-0"></span>
             </span>
@@ -231,9 +213,6 @@
           </button>
           <div class="dropdown-menu dropdown-menu-end header-language-scrollable" aria-labelledby="accountNavbarDropdown">
             <div class="dropdown dropstart d-block">
-              <a class="dropdown-item d-block w-100 text-start" href="#!" data-bs-toggle="dropdown" aria-expanded="false">
-                Set status
-              </a>
               <ul class="dropdown-menu">
                 <li class="dropdown-item">
                   <span class="h-8px w-8px rounded-pill bg-success me-2"></span>
@@ -253,26 +232,6 @@
                 </li>
               </ul>
             </div>
-            <a class="dropdown-item" href="../pages-profile-overview">Profile</a>
-            <a class="dropdown-item" href="../apps-chat">Messages</a>
-            <a class="dropdown-item" href="../apps-todo">My Task</a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="#!">
-              <div class="d-flex align-items-center">
-                <div class="flex-shrink-0">
-                  <div class="avatar-item avatar avatar-title text-white bg-primary border-0 fs-12">
-                    SRB
-                  </div>
-                </div>
-                <div class="flex-grow-1 ms-2">
-                  <h6 class="mb-0 lh-1">SRBThemes <span class="badge bg-primary-subtle text-primary rounded-pill text-uppercase ms-1 mb-0 py-1 fs-10">PRO</span></h6>
-                  <span class="card-text text-muted">google.com</span>
-                </div>
-              </div>
-            </a>
-            <div class="dropdown-divider"></div>
-            <a class="dropdown-item" href="../pages-profile-edit-overview">Settings</a>
-            <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="{{ route('logout') }}"
               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
               Cerrar sesión

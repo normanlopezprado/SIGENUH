@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HospitalServiceController;
+use App\Http\Controllers\HospitalController;
 
 
 Route::get('/', function () {
@@ -23,3 +24,7 @@ Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logou
 
 Route::resource('hospital-services', HospitalServiceController::class)
     ->middleware(['auth']);
+
+Route::resource('hospitals', HospitalController::class)
+    ->middleware(['auth']);
+

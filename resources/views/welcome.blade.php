@@ -13,18 +13,18 @@
                 <div class="col-lg-6">
                     <div class="auth-box card card-body m-0 h-100 border-0 justify-content-center">
                         <div class="mb-5 text-center">
-                            <h4 class="fw-normal">Bienvenido a <span class="text-primary">SIGENHUH</span></h4>
+                            <h4 class="fw-normal">Bienvenido a <span class="fw-bold text-primary">SIGENUH</span></h4>
                             <p class="text-muted mb-0">Sistema de gestión nutricional hospitalaria.</p>
                         </div>
                         <form class="form-custom mt-10">
                             <div class="mb-5">
-                                <label class="form-label" for="login-email">Email<span class="text-danger ms-1">*</span>
+                                <label class="form-label" for="login-email">Usuario<span class="text-danger ms-1">*</span>
                                 </label>
-                                <input type="text" class="form-control" id="login-email" placeholder="Enter your email">
+                                <input type="text" class="form-control" id="login-email" placeholder="Ingresa tu usuario">
                             </div>
 
                             <div class="mb-5">
-                                <label class="form-label" for="LoginPassword">Password<span
+                                <label class="form-label" for="LoginPassword">Contraseña<span
                                         class="text-danger ms-1">*</span></label>
                                 <div class="input-group">
                                     <input type="password" id="LoginPassword" class="form-control" name="password"
@@ -54,7 +54,7 @@
                             <a href="index">
                                 <button type="button" class="btn btn-primary rounded-2 w-100 btn-loader">
                                     <span class="indicator-label">
-                                        Iniciar Sesión
+                                        Iniciar sesión
                                     </span>
                                     <span class="indicator-progress flex gap-2 justify-content-center w-100">
                                         <span>Please Wait...</span>
@@ -62,23 +62,9 @@
                                     </span>
                                 </button>
                             </a>
-                            <div class="center-hr my-10 text-nowrap text-muted">Or with email</div>
-                            <div class="d-flex flex-wrap align-items-center justify-content-center gap-2">
-                                <button type="button" class="btn btn-outline-facebook icon-btn">
-                                    <i class="ri-facebook-fill"></i>
-                                </button>
-                                <button type="button" class="btn btn-outline-google icon-btn">
-                                    <i class="ri-google-fill"></i>
-                                </button>
-                                <button type="button" class="btn btn-outline-twitter icon-btn">
-                                    <i class="ri-twitter-fill"></i>
-                                </button>
-                                <button type="button" class="btn btn-outline-instagram icon-btn">
-                                    <i class="ri-instagram-fill"></i>
-                                </button>
                             </div>
                             <p class="mb-0 mt-5 text-muted text-center">
-                                Don't have an account ?
+                                Todavía no tienes una cuenta ?
                                 <a href="auth-signup" class="text-primary fw-medium text-decoraton-underline ms-1">
                                     Sign up
                                 </a>

@@ -25,7 +25,6 @@
                                 <div class="form-icon">
                                     <i class="ri-chat-1-line text-muted"></i>
                                     <textarea name="description" id="description" class="form-control form-control-icon" rows="3">{{ old('description', $service->description) }}</textarea>
-
                                 </div>
                             </div>
                             <div class="col-12">
@@ -43,9 +42,3 @@
             </div>
         </div>
     </div>
-
-
-
-
-
-

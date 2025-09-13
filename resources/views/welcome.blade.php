@@ -52,7 +52,7 @@
                                     </span>
                                 </a>
                             </div>
-                              <button type="submit" class="btn btn-primary rounded-2 w-100 btn-loader">
+                              <button type="submit" class="btn btn-primary rounded-2 w-100">
                                     <span class="indicator-label">
                                         Iniciar sesión
                                     </span>

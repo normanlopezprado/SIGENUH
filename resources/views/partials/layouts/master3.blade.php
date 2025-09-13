@@ -6,7 +6,7 @@
     <title>@yield('SIGENUH', ' Sistema de gestión nutricional hospitalaria')</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Proyecto de graduación para el hospital regional de occidente">
-    <link rel="shortcut icon" href="{{ asset('assets/images/Favicon1.png') }}">
+    <link rel="shortcut icon" href="{{ asset('assets/images/16650.png') }}">
     <meta property="og:locale" content="es_ES">
 
     @yield('css')

@@ -8,7 +8,7 @@
         <div class="app-sidebar-logo app-horizontal-logo justify-content-center align-items-center">
           <a href="dashboard">
             <img height="35" class="app-sidebar-logo-default" alt="Logo" loading="lazy" src="{{ asset('assets/images/light-log.png') }}">">
-            <img height="40" class="app-sidebar-logo-minimize" alt="Logo" loading="lazy" src="{{ asset('assets/images/Favico.png') }}">">
+            <img height="40" class="app-sidebar-logo-minimize" alt="Logo" loading="lazy" src="{{ asset('assets/images/16650.png') }}">">
           </a>
         </div>
 
@@ -112,77 +112,15 @@
           <!-- Apps -->
           <div class="dropdown features-dropdown">
             <button type="button" class="btn icon-btn btn-text-primary rounded-circle" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              <span class="visually-hidden">Browse by Apps</span>
+              <span class="visually-hidden">Seleccione un hospital</span>
               <i class="bi bi-grid"></i>
             </button>
             <div class="dropdown-menu dropdown-menu-lg p-0 dropdown-menu-end">
               <div class="card shadow-none mb-0 border-0">
                 <div class="card-header hstack gap-2">
-                  <h5 class="card-title mb-0 flex-grow-1">Browse by Apps</h5>
-                  <a href="#!" class="btn btn-sm btn-subtle-info flex-shrink-0">View All Apps
-                    <i class="ri-arrow-right-s-line align-middle"></i>
-                  </a>
+                  <h5 class="card-title mb-0 flex-grow-1">Seleccione un hospital</h5>
                 </div>
-                <div class="card-body px-3">
-                  <div class="row g-0">
-                    <div class="col">
-                      <a class="dropdown-icon-item" href="../apps-calendar">
-                        <div class="avatar border-0 avatar-item bg-light mx-auto mb-2">
-                          <i class="bi bi-calendar-event align-middle text-muted"></i>
-                        </div>
-                        <p class="mb-1 h6 fw-medium">Calendar</p>
-                        <p class="mb-0 text-muted fs-11">Events</p>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a class="dropdown-icon-item" href="../apps-tasks-kanban">
-                        <div class="avatar border-0 avatar-item bg-light mx-auto mb-2">
-                          <i class="bi bi-view-stacked align-middle text-muted"></i>
-                        </div>
-                        <p class="mb-1 h6 fw-medium">Kanban</p>
-                        <p class="mb-0 text-muted fs-11">Projects</p>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a class="dropdown-icon-item" href="../apps-todo">
-                        <div class="avatar border-0 avatar-item bg-light mx-auto mb-2">
-                          <i class="ri-check-double-line align-middle text-muted"></i>
-                        </div>
-                        <p class="mb-1 h6 fw-medium">To-Do</p>
-                        <p class="mb-0 text-muted fs-11">Tasks</p>
-                      </a>
-                    </div>
-                  </div>
-                  <div class="row g-0">
-                    <div class="col">
-                      <a class="dropdown-icon-item" href="../apps-chat">
-                        <div class="avatar border-0 avatar-item bg-light mx-auto mb-2">
-                          <i class="ri-chat-1-line align-middle text-muted"></i>
-                        </div>
-                        <p class="mb-1 h6 fw-medium">Chat</p>
-                        <p class="mb-0 text-muted fs-11">Messages</p>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a class="dropdown-icon-item" href="../apps-email-list">
-                        <div class="avatar border-0 avatar-item bg-light mx-auto mb-2">
-                          <i class="ri-mail-line align-middle text-muted"></i>
-                        </div>
-                        <p class="mb-1 h6 fw-medium">Email</p>
-                        <p class="mb-0 text-muted fs-11">Mail</p>
-                      </a>
-                    </div>
-                    <div class="col">
-                      <a class="dropdown-icon-item" href="../dashboard">
-                        <div class="avatar border-0 avatar-item bg-light mx-auto mb-2">
-                          <i class="ri-shopping-cart-line align-middle text-muted"></i>
-                        </div>
-                        <p class="mb-1 h6 fw-medium">E-Commerce</p>
-                        <p class="mb-0 text-muted fs-11">Store</p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
+
               </div>
             </div>
           </div>

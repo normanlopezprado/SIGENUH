@@ -16,7 +16,6 @@
     <div class="row g-4">
         <div class="col-12">
             <div class="card mb-0 h-100">
-                <a href="{{ route('hospital-services.create') }}" class="btn btn-primary">Nuevo</a>
                 <table class="data-table-basic table-hover align-middle table table-nowrap w-100">
                     <thead class="bg-light bg-opacity-30">
                     <tr>

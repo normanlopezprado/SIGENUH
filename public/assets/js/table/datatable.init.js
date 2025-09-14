@@ -14,11 +14,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const dataTableResponsive = document.querySelector('.data-table-responsive');
     // dataTableBasic datatable initialization
     if (dataTableBasic) {
+        const basePath = window.location.pathname.replace(/\/$/, "");
+
         const dataTableBasicType = new DataTable(dataTableBasic, {
 
             dom: '<"card-header dt-head d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3"' +
                 '<"head-label">' +
-                '<"d-flex flex-column flex-sm-row align-items-center justify-content-sm-end gap-3 w-100"f>' +
+                '<"d-flex flex-column flex-sm-row align-items-center justify-content-sm-end gap-3 w-100"f<"add_button">>' +
                 '>' +
                 '<"table-responsive"t>' +
                 '<"card-footer d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2"i' +
@@ -37,6 +39,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
             lengthMenu: [10, 20, 50],
             pageLength: 10,
+            initComplete: function () {
+                const add_button = document.querySelector('.add_button');
+                add_button.innerHTML = `
+                    <a class="btn btn-primary" href="${basePath}/create" >Añadir datos</a>`;
+            }
         });
 
         document.querySelector('div.head-label').innerHTML = '<h5 class="card-title text-nowrap mb-0">Basic Data-Table</h5>';

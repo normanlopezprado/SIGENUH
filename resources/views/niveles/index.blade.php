@@ -21,7 +21,6 @@
                     <tr>
                         <th>#</th>
                         <th>Nombre</th>
-                        <th>Orden</th>
                         <th>Estado</th>
                         <th></th>
                     </tr>
@@ -31,7 +30,6 @@
                         <tr>
                             <td>{{ $n->id }}</td>
                             <td><a href="{{ route('niveles.show', $n) }}">{{ $n->name }}</a></td>
-                            <td>{{ $n->order }}</td>
                             <td>{{ $n->status ? 'Activo' : 'Inactivo' }}</td>
                             <td class="d-flex gap-2">
                                 <a class="btn btn-sm btn-warning" href="{{ route('niveles.edit', $n) }}">Editar</a>

@@ -74,7 +74,8 @@ class NivelController extends Controller
      */
     public function destroy(Nivel $nivel)
     {
-        $nivel->update(['status' => false]);
+        $nivel->status = false;
+        $nivel->save();
         return redirect()->route('niveles.index')
             ->with('success', 'Nivel desactivado.');
     }

@@ -37,14 +37,6 @@
 
                                 </div>
                             </div>
-                            <div class="col-12">
-                                <div class="form-check mb-4">
-                                    <input type="hidden" name="status" value="0">
-                                    <input type="checkbox" id="status" name="status" class="form-check-input" value="1"
-                                        {{ old('status', $service->status) ? 'checked' : '' }}>
-                                    <label for="status" class="form-check-label">Activo</label>
-                                </div>
-                            </div>
                         </div>
                     <button type="submit" class="btn btn-primary">Guardar</button>
                     <a href="{{ route('hospital-services.index') }}" class="btn btn-secondary">Cancelar</a>

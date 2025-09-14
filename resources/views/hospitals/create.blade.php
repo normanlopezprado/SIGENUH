@@ -1,21 +1,29 @@
 @extends('partials.layouts.master2')
 
 @section('title', 'sigenhuh')
-@section('sub-title', 'Editar Servicio' )
+@section('sub-title', 'Crear Hospital' )
 @section('pagetitle', 'Inicio')
 @section('buttonTitle', 'Share')
 @section('modalTarget', 'shareModal')
 
 @section('css')
     <link rel="stylesheet" href="{{ asset('assets/libs/air-datepicker/air-datepicker.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/libs/leaflet/leaflet.css') }}">
 @endsection
 
-
 @section('content')
-    <form method="POST" action="{{ route('hospital-services.update', $hospitalService) }}">
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul class="mb-0">
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+    <form method="POST" action="{{ route('hospitals.store') }}" enctype="multipart/form-data">
         @csrf
-        @method('PUT')
-        @include('hospital_services.form', ['service' => $hospitalService])
+        @include('hospitals.form', ['hospital' => new \App\Models\Hospital()])
     </form>
 @endsection
 @section('js')

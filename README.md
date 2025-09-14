@@ -22,5 +22,9 @@ use Illuminate\Support\Facades\Hash;
 use App\Models\User;
 User::create(['name' => 'Admin','email' => 'admin@***.com','password' => Hash::make('***'),]);
 ```
+### 📌 Rutas
+```bash
+   php artisan storage:link
+```
 
 

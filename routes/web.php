@@ -5,7 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HospitalServiceController;
 use App\Http\Controllers\HospitalController;
-
+use App\Http\Controllers\NivelController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -28,3 +28,6 @@ Route::resource('hospital-services', HospitalServiceController::class)
 Route::resource('hospitals', HospitalController::class)
     ->middleware(['auth']);
 
+Route::resource('niveles', NivelController::class)
+    ->parameters(['niveles' => 'nivel'])
+    ->middleware(['auth']);

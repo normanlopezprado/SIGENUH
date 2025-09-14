@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
 
             lengthMenu: [10, 20, 50],
-            pageLength: 10,
+            pageLength: 50,
             initComplete: function () {
                 const add_button = document.querySelector('.add_button');
                 add_button.innerHTML = `

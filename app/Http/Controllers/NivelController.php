@@ -59,8 +59,7 @@ class NivelController extends Controller
     public function update(Request $request, Nivel $nivel)
     {
         $data = $request->validate([
-            'name'        => ['required','string','max:100'],
-            'status'      => ['required','boolean'],
+            'name'        => ['required','string','max:100']
         ]);
 
         $nivel->update($data);
@@ -74,8 +73,9 @@ class NivelController extends Controller
      */
     public function destroy(Nivel $nivel)
     {
-        $nivel->status = false;
-        $nivel->save();
+        $nivelDel = Nivel::where('id',$nivel->id)->firstOrFail();
+        $nivelDel->status = 0;
+        $nivelDel->update();
         return redirect()->route('niveles.index')
             ->with('success', 'Nivel desactivado.');
     }

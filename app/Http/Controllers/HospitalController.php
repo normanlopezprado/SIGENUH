@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Hospital;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class HospitalController extends Controller
 {
@@ -34,23 +35,31 @@ class HospitalController extends Controller
             'name'        => ['required','string','max:120'],
             'description' => ['nullable','string'],
             'address'     => ['nullable','string','max:255'],
+            'email'       => ['nullable','string','max:255'],
+            'phone'       => ['nullable','string','max:10'],
             'logo'        => ['nullable','image','mimes:jpg,jpeg,png,webp','max:2048'],
             'icon'        => ['nullable','image','mimes:png,webp,ico','max:256'],
             'latitude'    => ['nullable','numeric','between:-90,90'],
             'longitude'   => ['nullable','numeric','between:-180,180'],
         ]);
-
+        $uuid = (string) Str::uuid();
+        $data['id'] = $uuid; // <-- importante si tu PK es uuid
         if ($request->hasFile('logo')) {
-            // Guarda en storage/app/public/logos
-            $data['logo_path'] = $request->file('logo')->store('logos', 'public');
+            $ext = $request->file('logo')->extension();
+            $filename = "{$uuid}.{$ext}";
+            $request->file('logo')->storeAs('logos', $filename, 'public');
+            $data['logo_path'] = "logos/{$filename}";
         }
+
         if ($request->hasFile('icon')) {
-            // Guarda en storage/app/public/logos
-            $data['icon_path'] = $request->file('icon')->store('icons', 'public');
+            $ext = $request->file('icon')->extension();
+            $filename = "{$uuid}.{$ext}";
+            $request->file('icon')->storeAs('icons', $filename, 'public');
+            $data['icon_path'] = "icons/{$filename}";
         }
         $hospital = Hospital::create($data);
 
-        return redirect()->route('hospitals.show', $hospital)
+        return redirect()->route('hospitals.index', $hospital)
             ->with('success', 'Hospital creado correctamente.');
     }
 
@@ -79,29 +88,39 @@ class HospitalController extends Controller
             'name'        => ['required','string','max:120'],
             'description' => ['nullable','string'],
             'address'     => ['nullable','string','max:255'],
+            'email'       => ['nullable','string','max:255'],
+            'phone'       => ['nullable','string','max:10'],
             'logo'        => ['nullable','image','mimes:jpg,jpeg,png,webp','max:2048'],
             'icon'        => ['nullable','image','mimes:png,webp,ico','max:256'],
             'latitude'    => ['nullable','numeric','between:-90,90'],
             'longitude'   => ['nullable','numeric','between:-180,180'],
         ]);
-        if ($request->hasFile('logo')) {
-            // Borra el anterior si existía
-            if ($hospital->logo_path) {
-                Storage::disk('public')->delete($hospital->logo_path);
-            }
-            $data['logo_path'] = $request->file('logo')->store('logos', 'public');
-        }
-        if ($request->hasFile('icon')) {
-            // Borra el anterior si existía
-            if ($hospital->logo_path) {
-                Storage::disk('public')->delete($hospital->logo_path);
-            }
-            $data['icon_path'] = $request->file('icon')->store('icons', 'public');
-            $hospital->update($data);
+        $uuid = $hospital->id; // usamos el mismo id (UUID)
 
-            return redirect()->route('hospitals.show', $hospital)
-                ->with('success', 'Hospital actualizado correctamente.');
+        // Logo
+        if ($request->hasFile('logo')) {
+            if ($hospital->logo_path) {
+                Storage::disk('public')->delete($hospital->logo_path);
+            }
+            $ext = $request->file('logo')->extension();
+            $filename = "{$uuid}.{$ext}";
+            $request->file('logo')->storeAs('logos', $filename, 'public');
+            $data['logo_path'] = "logos/{$filename}";
         }
+
+        // Icon
+        if ($request->hasFile('icon')) {
+            if ($hospital->icon_path) { // aquí corregido, antes borrabas logo_path
+                Storage::disk('public')->delete($hospital->icon_path);
+            }
+            $ext = $request->file('icon')->extension();
+            $filename = "{$uuid}.{$ext}";
+            $request->file('icon')->storeAs('icons', $filename, 'public');
+            $data['icon_path'] = "icons/{$filename}";
+        }
+        $hospital->update($data);
+        return redirect()->route('hospitals.index', $hospital)
+            ->with('success', 'Hospital actualizado correctamente.');
     }
 
     /**

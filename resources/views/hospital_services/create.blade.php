@@ -1,10 +1,8 @@
-
-
     @extends('partials.layouts.master2')
 
     @section('title', 'sigenhuh')
-    @section('sub-title', 'Editar Servicio' )
-    @section('pagetitle', 'Home')
+    @section('sub-title', 'Crear Servicio' )
+    @section('pagetitle', 'Inicio')
     @section('buttonTitle', 'Share')
     @section('modalTarget', 'shareModal')
 

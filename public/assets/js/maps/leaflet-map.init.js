@@ -16,20 +16,69 @@ function initializeMap(mapId, coords) {
 }
 
 // Initialize maps
-const map1 = initializeMap('leaflet_map', [51.505, -0.09]);
-const map2 = initializeMap('leaflet_map_markers', [51.505, -0.09]);
-const map3 = initializeMap('leaflet_map_popup', [51.505, -0.09]);
-const map4 = initializeMap('leaflet_map_custom_icon', [51.505, -0.09]);
+const latInput = document.getElementById('latitude');
+const lngInput = document.getElementById('longitude');
+const map1 = initializeMap('leaflet_map', [14.856713, -91.512105]);
 
-// Add shapes and markers to map2
-L.marker([51.5, -0.09]).addTo(map2);
-L.circle([51.508, -0.11], { color: 'red', fillColor: '#f03', fillOpacity: 0.5, radius: 500 }).addTo(map2);
-L.polygon([[51.509, -0.08], [51.503, -0.06], [51.51, -0.047]]).addTo(map2);
+(function () {
+    if (!map1) return;
 
-// Add a popup to map3
-const markerPopup = L.marker([51.5, -0.09]).addTo(map3);
-markerPopup.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
-L.popup().setLatLng([51.513, -0.09]).setContent("I am a standalone popup.").openOn(map3);
+    var currentMarker = null;
+    var latInput = document.getElementById('latitude');
+    var lngInput = document.getElementById('longitude');
+
+    // Función para actualizar inputs
+    function updateInputs(lat, lng) {
+        if (latInput) latInput.value = lat.toFixed(6);
+        if (lngInput) lngInput.value = lng.toFixed(6);
+    }
+
+    // --- función para mover marcador y mapa ---
+    function moveMarkerTo(lat, lng, zoom) {
+        if (currentMarker) {
+            map1.removeLayer(currentMarker);
+        }
+        currentMarker = L.marker([lat, lng], { draggable: true }).addTo(map1);
+        updateInputs(lat, lng);
+
+        currentMarker.bindPopup(
+            "Lat: " + lat.toFixed(6) + "<br>Lng: " + lng.toFixed(6)
+        ).openPopup();
+
+        currentMarker.on('dragend', function (ev) {
+            var pos = ev.target.getLatLng();
+            updateInputs(pos.lat, pos.lng);
+            currentMarker.setPopupContent(
+                "Lat: " + pos.lat.toFixed(6) + "<br>Lng: " + pos.lng.toFixed(6)
+            ).openPopup();
+        });
+
+        if (zoom) {
+            map1.setView([lat, lng], zoom);
+        } else {
+            map1.panTo([lat, lng]);
+        }
+    }
+
+    // --- Al cargar: ¿hay valores en inputs? ---
+    (function initFromInputs() {
+        var lat = parseFloat(latInput && latInput.value);
+        var lng = parseFloat(lngInput && lngInput.value);
+
+        if (!isNaN(lat) && !isNaN(lng)) {
+            // Si hay valores → centrar ahí
+            moveMarkerTo(lat, lng, 16); // 16 = zoom inicial, ajusta a gusto
+        } else {
+            // Si no hay valores → se queda en coordenada inicial del map1
+            console.log("Inputs vacíos, se usa la posición inicial del mapa.");
+        }
+    })();
+
+    // --- Click en el mapa: crear/mover marcador ---
+    map1.on('click', function (e) {
+        moveMarkerTo(e.latlng.lat, e.latlng.lng);
+    });
+})();
 
 // Custom icon setup
 const LeafIcon = L.Icon.extend({
@@ -49,43 +98,4 @@ const icons = {
     orange: new LeafIcon({ iconUrl: 'https://leafletjs.com/examples/custom-icons/leaf-orange.png' })
 };
 
-// Add custom icons to map4
-L.marker([51.5, -0.09], { icon: icons.green }).addTo(map4).bindPopup("I am a green leaf.");
-L.marker([51.495, -0.083], { icon: icons.red }).addTo(map4).bindPopup("I am a red leaf.");
-L.marker([51.49, -0.1], { icon: icons.orange }).addTo(map4).bindPopup("I am an orange leaf.");
 
-// Create custom pane for labels in a new map
-const leaflet_map_custom_pane = L.map('leaflet_map_custom_pane').setView([55.0, -3.0], 5);
-leaflet_map_custom_pane.createPane('labels').style.zIndex = 650;
-leaflet_map_custom_pane.getPane('labels').style.pointerEvents = 'none';
-
-// Add base and labels layer
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap, © CartoDB'
-}).addTo(leaflet_map_custom_pane);
-
-L.tileLayer('https://{s}.basemaps.cartocdn.com/light_only_labels/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap, © CartoDB',
-    pane: 'labels'
-}).addTo(leaflet_map_custom_pane);
-
-// GeoJSON data for cities
-const geoJsonData = {
-    "type": "FeatureCollection",
-    "features": [
-        { "type": "Feature", "properties": { "name": "London" }, "geometry": { "type": "Point", "coordinates": [-0.09, 51.505] } },
-        { "type": "Feature", "properties": { "name": "Birmingham" }, "geometry": { "type": "Point", "coordinates": [-1.8904, 52.4862] } },
-        { "type": "Feature", "properties": { "name": "Manchester" }, "geometry": { "type": "Point", "coordinates": [-2.2426, 53.4808] } },
-        { "type": "Feature", "properties": { "name": "Newcastle" }, "geometry": { "type": "Point", "coordinates": [-1.6174, 54.9784] } },
-        { "type": "Feature", "properties": { "name": "Leeds" }, "geometry": { "type": "Point", "coordinates": [-1.5491, 53.8008] } },
-        { "type": "Feature", "properties": { "name": "Bristol" }, "geometry": { "type": "Point", "coordinates": [-2.5879, 51.4545] } },
-        { "type": "Feature", "properties": { "name": "Nottingham" }, "geometry": { "type": "Point", "coordinates": [-1.1614, 52.9548] } }
-    ]
-};
-
-// Add GeoJSON layer and bind popups
-const geojson = L.geoJson(geoJsonData).addTo(leaflet_map_custom_pane);
-geojson.eachLayer(layer => layer.bindPopup(layer.feature.properties.name));
-
-// Fit map to GeoJSON bounds
-leaflet_map_custom_pane.fitBounds(geojson.getBounds());

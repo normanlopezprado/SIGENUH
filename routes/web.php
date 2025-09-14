@@ -29,4 +29,5 @@ Route::resource('hospitals', HospitalController::class)
     ->middleware(['auth']);
 
 Route::resource('niveles', NivelController::class)
+    ->parameters(['niveles' => 'nivel'])
     ->middleware(['auth']);

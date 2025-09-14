@@ -19,7 +19,6 @@
                 <table class="data-table-basic table-hover align-middle table table-nowrap w-100">
                     <thead class="bg-light bg-opacity-30">
                     <tr>
-                        <th>#</th>
                         <th>Nombre</th>
                         <th>Estado</th>
                         <th></th>
@@ -28,7 +27,6 @@
                     <tbody>
                     @forelse($niveles as $n)
                         <tr>
-                            <td>{{ $n->id }}</td>
                             <td>{{ $n->name }}</td>
                             <td>{{ $n->status ? 'Activo' : 'Inactivo' }}</td>
                             <td class="d-flex gap-2">

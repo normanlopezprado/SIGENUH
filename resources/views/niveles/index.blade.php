@@ -33,9 +33,9 @@
                             <td>{{ $n->status ? 'Activo' : 'Inactivo' }}</td>
                             <td class="d-flex gap-2">
                                 <a class="btn btn-sm btn-warning" href="{{ route('niveles.edit', $n) }}">Editar</a>
-                                <form method="POST" action="{{ route('niveles.destroy', $n) }}" onsubmit="return confirm('¿Eliminar?')">
+                                <form method="POST" action="{{ route('niveles.destroy', $n->id) }}" onsubmit="return confirm('¿Eliminar?')">
                                     @csrf @method('DELETE')
-                                    <button class="btn btn-sm btn-danger">Eliminar</button>
+                                    <button type="submit" class="btn btn-sm btn-danger">Eliminar</button>
                                 </form>
                             </td>
                         </tr>

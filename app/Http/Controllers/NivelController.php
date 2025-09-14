@@ -40,9 +40,9 @@ class NivelController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Nivel $niveles)
+    public function show(Nivel $nivel)
     {
-        return view('niveles.show', ['nivel' => $niveles]);
+        return view('niveles.show', ['nivel' => $nivel]);
     }
 
     /**
@@ -71,11 +71,9 @@ class NivelController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Nivel $nivel)
+    public function destroy(string $nivel)
     {
-        $nivelDel = Nivel::where('id',$nivel->id)->firstOrFail();
-        $nivelDel->status = 0;
-        $nivelDel->update();
+        Nivel::where('id', $nivel)->update(['status' => false]);
         return redirect()->route('niveles.index')
             ->with('success', 'Nivel desactivado.');
     }

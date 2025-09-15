@@ -14,7 +14,7 @@
     @section('content')
         <form method="POST" action="{{ route('servicios.store') }}">
             @csrf
-            @include('servicios.form', ['service' => new \App\Models\HospitalService()])
+            @include('servicios.form', ['service' => new \App\Models\Service()])
         </form>
     @endsection
     @section('js')

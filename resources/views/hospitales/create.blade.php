@@ -1,7 +1,7 @@
 @extends('partials.layouts.master2')
 
 @section('title', 'sigenhuh')
-@section('sub-title', 'Editar Hospital' )
+@section('sub-title', 'Crear Hospital' )
 @section('pagetitle', 'Inicio')
 @section('buttonTitle', 'Share')
 @section('modalTarget', 'shareModal')
@@ -21,10 +21,9 @@
             </ul>
         </div>
     @endif
-    <form method="POST" action="{{ route('hospitals.update', $hospital) }}" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('hospitales.store') }}" enctype="multipart/form-data">
         @csrf
-        @method('PUT')
-        @include('hospitals.form', ['hospital' => $hospital])
+        @include('hospitales.form', ['hospital' => new \App\Models\Hospital()])
     </form>
 @endsection
 @section('js')

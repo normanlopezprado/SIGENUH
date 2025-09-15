@@ -15,33 +15,6 @@
             </li>
         </ul>
     </li>
-    <li class="slide">
-        <a href="#!" class="side-menu__item" role="menuitem">
-            <span class="side_menu_icon"><i class="ri-service-line"></i></span>
-            <span class="side-menu__label" data-lang="hr-layout">Servicios</span>
-            <i class="ri-arrow-down-s-line side-menu__angle"></i>
-        </a>
-        <ul class="slide-menu" role="menu">
-            <li class="slide">
-                <a href="{{ route('servicios.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Gestionar</a>
-            </li>
-            <li class="slide">
-                <a href="{{ route('servicios.create') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Nuevo</a>
-            </li>
-        </ul>
-    </li>
-    <li class="slide">
-        <a href="#!" class="side-menu__item" role="menuitem">
-            <span class="side_menu_icon"><i class="ri-building-4-line"></i></span>
-            <span class="side-menu__label" data-lang="hr-layout">Plantas</span>
-            <i class="ri-arrow-down-s-line side-menu__angle"></i>
-        </a>
-        <ul class="slide-menu" role="menu">
-            <li class="slide">
-                <a href="#" target="_blank" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Gestionar</a>
-            </li>
-        </ul>
-    </li>
     <li class="menu-title" role="presentation" data-lang="hr-title-applications">Departamento de nutrición</li>
     <li class="slide">
         <a href="#!" class="side-menu__item" role="menuitem">
@@ -133,12 +106,44 @@
         </a>
         <ul class="slide-menu" role="menu">
             <li class="slide">
-                <a href="/hospitals" class="side-menu__item" role="menuitem" data-lang="hr-vector-maps">Gestionar</a>
+                <a href="{{ route('hospitales.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-vector-maps">Gestionar</a>
             </li>
         </ul>
         <ul class="slide-menu" role="menu">
             <li class="slide">
-                <a href="/hospitals/create" class="side-menu__item" role="menuitem" data-lang="hr-vector-maps">Nuevo</a>
+                <a href="{{ route('hospitales.create') }}" class="side-menu__item" role="menuitem" data-lang="hr-vector-maps">Nuevo</a>
+            </li>
+        </ul>
+        <ul class="slide-menu" role="menu">
+            <li class="slide">
+                <a href="#!" class="side-menu__item" role="menuitem">
+                    <span><i class="ri-service-line"></i></span>
+                    <span class="side-menu__label" data-lang="hr-level-2-2">Servicios</span>
+                    <i class="ri-arrow-down-s-line side-menu__angle"></i>
+                </a>
+                <ul class="slide-menu" role="menu">
+                    <li class="slide">
+                        <a href="{{ route('servicios.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Gestionar</a>
+                    </li>
+                    <li class="slide">
+                        <a href="{{ route('servicios.create') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Nuevo</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="slide">
+                <a href="#!" class="side-menu__item" role="menuitem">
+                    <span class="side_menu_icon"><i class="ri-building-4-line"></i></span>
+                    <span class="side-menu__label" data-lang="hr-layout">Plantas</span>
+                    <i class="ri-arrow-down-s-line side-menu__angle"></i>
+                </a>
+                <ul class="slide-menu" role="menu">
+                    <li class="slide">
+                        <a href="#" target="_blank" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Gestionar</a>
+                    </li>
+                    <li class="slide">
+                        <a href="#" target="_blank" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Nuevo</a>
+                    </li>
+                </ul>
             </li>
         </ul>
     </li>

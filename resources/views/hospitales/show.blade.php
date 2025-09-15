@@ -31,6 +31,6 @@
     @endif
 
     <div class="mt-3 d-flex gap-2">
-        <a href="{{ route('hospitals.edit', $hospital) }}" class="btn btn-warning">Editar</a>
-        <a href="{{ route('hospitals.index') }}" class="btn btn-secondary">Volver</a>
+        <a href="{{ route('hospitales.edit', $hospital) }}" class="btn btn-warning">Editar</a>
+        <a href="{{ route('hospitales.index') }}" class="btn btn-secondary">Volver</a>
     </div>

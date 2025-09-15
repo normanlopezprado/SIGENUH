@@ -19,14 +19,19 @@
                 <table class="data-table-basic table-hover align-middle table table-nowrap w-100">
                     <thead class="bg-light bg-opacity-30">
                     <tr>
-                        <th>#</th><th>Logo</th><th>Icono</th><th>Nombre</th><th>Dirección</th><th>Correo</th><th>Teléfono</th><th></th>
+                        <th>Logo</th>
+                        <th>Icono</th>
+                        <th>Nombre</th>
+                        <th>Dirección</th>
+                        <th>Correo</th>
+                        <th>Teléfono</th>
+                        <th></th>
                         <th>Acción</th>
                     </tr>
                     </thead>
                     <tbody>
                     @forelse($hospitals as $h)
                         <tr>
-                            <td>{{ $h->id }}</td>
                             <td>
                                 @if($h->logo_url)
                                     <img src="{{ $h->logo_url }}" alt="logo" style="height:40px">
@@ -47,8 +52,8 @@
                                 @endif
                             </td>
                             <td class="d-flex gap-2">
-                                <a class="btn btn-sm btn-warning" href="{{ route('hospitals.edit', $h) }}">Editar</a>
-                                <form method="POST" action="{{ route('hospitals.destroy', $h) }}" onsubmit="return confirm('¿Eliminar?')">
+                                <a class="btn btn-sm btn-warning" href="{{ route('hospitales.edit', $h) }}">Editar</a>
+                                <form method="POST" action="{{ route('hospitales.destroy', $h) }}" onsubmit="return confirm('¿Eliminar?')">
                                     @csrf @method('DELETE')
                                     <button class="btn btn-sm btn-danger">Eliminar</button>
                                 </form>

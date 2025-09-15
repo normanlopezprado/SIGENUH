@@ -15,6 +15,8 @@ return new class extends Migration
             $table->uuid('id')->primary();
             $table->string('name', 120);
             $table->string('address', 255)->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone', 20)->nullable();
             $table->text('description')->nullable();
             $table->string('logo_path')->nullable(); // ruta del logo en storage
             $table->string('icon_path')->nullable(); // ruta del logo en storage

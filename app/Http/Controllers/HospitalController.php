@@ -15,7 +15,7 @@ class HospitalController extends Controller
     public function index()
     {
         $hospitals = Hospital::latest()->paginate(10);
-        return view('hospitals.index', compact('hospitals'));
+        return view('hospitales.index', compact('hospitals'));
     }
 
     /**
@@ -23,7 +23,7 @@ class HospitalController extends Controller
      */
     public function create()
     {
-        return view('hospitals.create');
+        return view('hospitales.create');
     }
 
     /**
@@ -38,7 +38,7 @@ class HospitalController extends Controller
             'email'       => ['nullable','string','max:255'],
             'phone'       => ['nullable','string','max:10'],
             'logo'        => ['nullable','image','mimes:jpg,jpeg,png,webp','max:2048'],
-            'icon'        => ['nullable','image','mimes:png,webp,ico','max:256'],
+            'icon'        => ['nullable','mimes:png,webp,ico','max:256'],
             'latitude'    => ['nullable','numeric','between:-90,90'],
             'longitude'   => ['nullable','numeric','between:-180,180'],
         ]);
@@ -59,7 +59,7 @@ class HospitalController extends Controller
         }
         $hospital = Hospital::create($data);
 
-        return redirect()->route('hospitals.index', $hospital)
+        return redirect()->route('hospitales.index', $hospital)
             ->with('success', 'Hospital creado correctamente.');
     }
 
@@ -68,7 +68,7 @@ class HospitalController extends Controller
      */
     public function show(Hospital $hospital)
     {
-        return view('hospitals.show', compact('hospital'));
+        return view('hospitales.show', compact('hospital'));
     }
 
     /**
@@ -76,7 +76,7 @@ class HospitalController extends Controller
      */
     public function edit(Hospital $hospital)
     {
-        return view('hospitals.edit', compact('hospital'));
+        return view('hospitales.edit', compact('hospital'));
     }
 
     /**
@@ -91,7 +91,7 @@ class HospitalController extends Controller
             'email'       => ['nullable','string','max:255'],
             'phone'       => ['nullable','string','max:10'],
             'logo'        => ['nullable','image','mimes:jpg,jpeg,png,webp','max:2048'],
-            'icon'        => ['nullable','image','mimes:png,webp,ico','max:256'],
+            'icon'        => ['nullable','mimes:png,webp,ico','max:256'],
             'latitude'    => ['nullable','numeric','between:-90,90'],
             'longitude'   => ['nullable','numeric','between:-180,180'],
         ]);
@@ -119,7 +119,7 @@ class HospitalController extends Controller
             $data['icon_path'] = "icons/{$filename}";
         }
         $hospital->update($data);
-        return redirect()->route('hospitals.index', $hospital)
+        return redirect()->route('hospitales.index', $hospital)
             ->with('success', 'Hospital actualizado correctamente.');
     }
 
@@ -133,7 +133,7 @@ class HospitalController extends Controller
         }
         $hospital->delete();
 
-        return redirect()->route('hospitals.index')
+        return redirect()->route('hospitales.index')
             ->with('success', 'Hospital eliminado.');
     }
 }

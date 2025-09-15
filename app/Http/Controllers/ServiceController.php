@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\HospitalService;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class ServiceController extends Controller
@@ -13,7 +13,7 @@ class ServiceController extends Controller
     public function index()
     {
         //
-        $services = HospitalService::latest()->get();
+        $services = Service::latest()->get();
         return view('servicios.index', compact('services'));
     }
 
@@ -30,7 +30,7 @@ class ServiceController extends Controller
      */
     public function store(Request $request)
     {
-        HospitalService::create($request->all()); // si usas Request normal: $request->all() con fillable
+        Service::create($request->all()); // si usas Request normal: $request->all() con fillable
         return redirect()->route('servicios.index')
             ->with('success', 'Servicio creado correctamente.');
     }
@@ -38,15 +38,15 @@ class ServiceController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(HospitalService $servicio)
+    public function show(Service $servicio)
     {
-        return view('servicios.show', compact('hospitalService'));
+        return view('servicios.show', compact('Service'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(HospitalService $servicio)
+    public function edit(Service $servicio)
     {
         return view('servicios.edit', compact('servicio'));
     }
@@ -54,7 +54,7 @@ class ServiceController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, HospitalService $servicio)
+    public function update(Request $request, Service $servicio)
     {
         $servicio->update($request->all());
         return redirect()->route('servicios.index')
@@ -64,7 +64,7 @@ class ServiceController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(HospitalService $servicio)
+    public function destroy(Service $servicio)
     {
         $servicio->delete();
         return redirect()->route('servicios.index')

@@ -3,7 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Auth\LoginController;
-use App\Http\Controllers\HospitalServiceController;
+use App\Http\Controllers\ServiceController;
 use App\Http\Controllers\HospitalController;
 use App\Http\Controllers\NivelController;
 
@@ -22,7 +22,7 @@ Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])
     ->name('logout');
 
-Route::resource('servicios', HospitalServiceController::class)
+Route::resource('servicios', ServiceController::class)
     ->middleware(['auth']);
 
 Route::resource('hospitals', HospitalController::class)

@@ -39,7 +39,12 @@
                             </td>
                         </tr>
                     @empty
-                        <tr><td colspan="6">Sin registros</td></tr>
+                        <tr>
+                            <td colspan="6">
+                                Sin registros,
+                                <a href="{{ route('servicios.create') }}" class="btn btn-primary">Nuevo</a>
+                            </td>
+                        </tr>
                     @endforelse
                     </tbody>
                 </table>

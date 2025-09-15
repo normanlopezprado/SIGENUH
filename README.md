@@ -10,7 +10,7 @@ Ejecutar los seeds siguientes:
 
 ### 📌 Servicios
 ```bash
-   php artisan db:seed --class=HospitalServiceSeeder
+   php artisan db:seed --class=ServiceSeeder
 ```
 
 ### 👤 Usuarios

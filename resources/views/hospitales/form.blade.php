@@ -90,7 +90,7 @@
 
                 </div>
                 <button class="btn btn-primary mt-3">Guardar</button>
-                <a href="{{ route('hospitals.index') }}" class="btn btn-secondary mt-3">Cancelar</a>
+                <a href="{{ route('hospitales.index') }}" class="btn btn-secondary mt-3">Cancelar</a>
             </div>
         </div>
     </div>

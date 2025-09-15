@@ -21,9 +21,9 @@
             </ul>
         </div>
     @endif
-    <form method="POST" action="{{ route('hospitals.store') }}" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('hospitales.store') }}" enctype="multipart/form-data">
         @csrf
-        @include('hospitals.form', ['hospital' => new \App\Models\Hospital()])
+        @include('hospitales.form', ['hospital' => new \App\Models\Hospital()])
     </form>
 @endsection
 @section('js')

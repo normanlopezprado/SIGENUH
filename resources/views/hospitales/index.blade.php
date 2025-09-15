@@ -47,8 +47,8 @@
                                 @endif
                             </td>
                             <td class="d-flex gap-2">
-                                <a class="btn btn-sm btn-warning" href="{{ route('hospitals.edit', $h) }}">Editar</a>
-                                <form method="POST" action="{{ route('hospitals.destroy', $h) }}" onsubmit="return confirm('¿Eliminar?')">
+                                <a class="btn btn-sm btn-warning" href="{{ route('hospitales.edit', $h) }}">Editar</a>
+                                <form method="POST" action="{{ route('hospitales.destroy', $h) }}" onsubmit="return confirm('¿Eliminar?')">
                                     @csrf @method('DELETE')
                                     <button class="btn btn-sm btn-danger">Eliminar</button>
                                 </form>

@@ -25,7 +25,7 @@ Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logou
 Route::resource('servicios', ServiceController::class)
     ->middleware(['auth']);
 
-Route::resource('hospitals', HospitalController::class)
+Route::resource('hospitales', HospitalController::class)
     ->middleware(['auth']);
 
 Route::resource('niveles', NivelController::class)

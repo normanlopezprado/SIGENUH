@@ -21,10 +21,10 @@
             </ul>
         </div>
     @endif
-    <form method="POST" action="{{ route('hospitals.update', $hospital) }}" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('hospitales.update', $hospital) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
-        @include('hospitals.form', ['hospital' => $hospital])
+        @include('hospitales.form', ['hospital' => $hospital])
     </form>
 @endsection
 @section('js')

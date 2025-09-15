@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\HospitalService;
 use Illuminate\Http\Request;
-use App\Http\Requests\HospitalServiceRequest;
+
 class HospitalServiceController extends Controller
 {
     /**
@@ -28,7 +28,7 @@ class HospitalServiceController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(request $request)
+    public function store(Request $request)
     {
         HospitalService::create($request->all()); // si usas Request normal: $request->all() con fillable
         return redirect()->route('hospital-services.index')
@@ -54,7 +54,7 @@ class HospitalServiceController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(request $request, HospitalService $hospitalService)
+    public function update(Request $request, HospitalService $hospitalService)
     {
         $hospitalService->update($request->all());
         return redirect()->route('hospital-services.index')

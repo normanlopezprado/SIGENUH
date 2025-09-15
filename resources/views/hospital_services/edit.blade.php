@@ -1,6 +1,6 @@
 @extends('partials.layouts.master2')
 
-@section('title', 'sigenhuh')
+@section('title', 'SIGENUH')
 @section('sub-title', 'Editar Servicio' )
 @section('pagetitle', 'Inicio')
 @section('buttonTitle', 'Share')
@@ -15,7 +15,7 @@
     <form method="POST" action="{{ route('hospital-services.update', $hospitalService) }}">
         @csrf
         @method('PUT')
-        @include('hospital_services.form', ['service' => new $hospitalService])
+        @include('hospital_services.form', ['service' => $hospitalService])
     </form>
 @endsection
 @section('js')

@@ -18,10 +18,9 @@
                 <table class="data-table-basic table-hover align-middle table table-nowrap w-100">
                     <thead class="bg-light bg-opacity-30">
                     <tr>
-                        <th>Nombre</th>
-                        <th>Abrev.</th>
+                        <th>Servicio</th>
+                        <th>Abreviatura</th>
                         <th>Categoría</th>
-                        <th>Estado</th>
                         <th>Acción</th>
                     </tr>
                     </thead>
@@ -31,7 +30,6 @@
                             <td><a href="{{ route('servicios.show', $s) }}">{{ $s->name }}</a></td>
                             <td>{{ $s->abbreviation }}</td>
                             <td>{{ $s->category }}</td>
-                            <td>{{ $s->status ? 'Activo' : 'Inactivo' }}</td>
                             <td class="d-flex gap-2">
                                 <a class="btn btn-sm btn-warning" href="{{ route('servicios.edit', $s) }}">Editar</a>
                                 <form method="POST" action="{{ route('servicios.destroy', $s) }}">

@@ -16,19 +16,16 @@
             <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css"/>
         @endpush
         @push('scripts')
-            import "https://unpkg.com/leaflet/dist/leaflet.js";
+            <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', () => {
+                    const lat = {{ $hospital->latitude }};
+                    const lng = {{ $hospital->longitude }};
 
-            document.addEventListener('DOMContentLoaded', () => {
-                const lat  = @json($hospital->latitude);
-                const lng  = @json($hospital->longitude);
-                const name = @json($hospital->name);
-
-                if (lat === null || lng === null) return;
-
-                const map = L.map('map').setView([lat, lng], 14);
-                L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
-                L.marker([lat, lng]).addTo(map).bindPopup(name).openPopup();
-             });
+                    const map = L.map('map').setView([lat, lng], 14);
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', { maxZoom: 19 }).addTo(map);
+                    L.marker([lat, lng]).addTo(map).bindPopup(`{{ $hospital->name }}`).openPopup();
+                });
             </script>
         @endpush
     @endif

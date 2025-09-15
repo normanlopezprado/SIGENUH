@@ -13,21 +13,14 @@ class ServiceSeeder extends Seeder
     public function run(): void
     {
         $services = [
-            ['name' => 'Medicina de Mujeres',        'abbreviation' => 'MED-M', 'category' => 'Medicina'],
-            ['name' => 'Medicina de Hombres',        'abbreviation' => 'MED-H', 'category' => 'Medicina'],
-            ['name' => 'Cirugía de Mujeres',         'abbreviation' => 'CIR-M', 'category' => 'Cirugía'],
-            ['name' => 'Cirugía de Hombres',         'abbreviation' => 'CIR-H', 'category' => 'Cirugía'],
-            ['name' => 'UCIA - C',                   'abbreviation' => 'UCIA-C','category' => 'UCI'],
-            ['name' => 'UCIP',                       'abbreviation' => 'UCIP',  'category' => 'UCI'],
-            ['name' => 'UCIA - A',                   'abbreviation' => 'UCIA-A','category' => 'UCI'],
-            ['name' => 'TM, EM, TP',                 'abbreviation' => 'TM/EM/TP','category' => 'Terapias'],
-            ['name' => 'Trauma de Hombre',           'abbreviation' => 'TRAUMA-H','category' => 'Trauma'],
-            ['name' => 'Especialidades de Hombres',  'abbreviation' => 'ESP-H', 'category' => 'Especialidades'],
-            ['name' => 'Ginecología',                'abbreviation' => 'GINE',  'category' => 'Ginecología'],
-            ['name' => 'Post Parto',                 'abbreviation' => 'POSTP', 'category' => 'Obstetricia'],
-            ['name' => 'Pre Escolares',              'abbreviation' => 'PREESC','category' => 'Pediatría'],
-            ['name' => 'Sala Cuna',                  'abbreviation' => 'SCUNA', 'category' => 'Pediatría'],
-            ['name' => 'Emergencia',                 'abbreviation' => 'EMG',   'category' => 'Emergencia'],
+            ['name' => 'Cirugía',           'abbreviation' => 'CM',  'category' => 'Mujeres'],
+            ['name' => 'Cirugía',           'abbreviation' => 'CH',  'category' => 'Hombres'],
+            ['name' => 'Especialidad',      'abbreviation' => 'EM',  'category' => 'Mujeres'],
+            ['name' => 'Especialidad',      'abbreviation' => 'EH',  'category' => 'Hombres'],
+            ['name' => 'Medicina Interna',  'abbreviation' => 'MIH', 'category' => 'Hombres'],
+            ['name' => 'Medicina Interna',  'abbreviation' => 'MIM', 'category' => 'Mujeres'],
+            ['name' => 'Traumatología',     'abbreviation' => 'TM',  'category' => 'Mujeres'],
+            ['name' => 'Traumatología',     'abbreviation' => 'TH',  'category' => 'Hombres'],
         ];
         foreach ($services as $r) {
             \App\Models\Service::firstOrCreate(['name'=>$r['name']], $r);

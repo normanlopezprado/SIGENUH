@@ -22,7 +22,7 @@ Route::post('/login', [LoginController::class, 'login']);
 Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logout'])
     ->name('logout');
 
-Route::resource('hospital-services', HospitalServiceController::class)
+Route::resource('servicios', HospitalServiceController::class)
     ->middleware(['auth']);
 
 Route::resource('hospitals', HospitalController::class)

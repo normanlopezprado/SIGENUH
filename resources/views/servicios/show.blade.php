@@ -5,5 +5,5 @@
     <p><strong>Estado:</strong> {{ $hospital_service->status ? 'Activo' : 'Inactivo' }}</p>
     <p>{{ $hospital_service->description }}</p>
 
-    <a href="{{ route('hospitalService.index') }}" class="btn btn-secondary">Volver</a>
+    <a href="{{ route('servicios.index') }}" class="btn btn-secondary">Volver</a>
 

@@ -28,13 +28,13 @@
                     <tbody>
                     @forelse($services as $s)
                         <tr>
-                            <td><a href="{{ route('hospital-services.show', $s) }}">{{ $s->name }}</a></td>
+                            <td><a href="{{ route('servicios.show', $s) }}">{{ $s->name }}</a></td>
                             <td>{{ $s->abbreviation }}</td>
                             <td>{{ $s->category }}</td>
                             <td>{{ $s->status ? 'Activo' : 'Inactivo' }}</td>
                             <td class="d-flex gap-2">
-                                <a class="btn btn-sm btn-warning" href="{{ route('hospital-services.edit', $s) }}">Editar</a>
-                                <form method="POST" action="{{ route('hospital-services.destroy', $s) }}">
+                                <a class="btn btn-sm btn-warning" href="{{ route('servicios.edit', $s) }}">Editar</a>
+                                <form method="POST" action="{{ route('servicios.destroy', $s) }}">
                                     @csrf @method('DELETE')
                                     <button class="btn btn-sm btn-danger" onclick="return confirm('¿Eliminar?')">Eliminar</button>
                                 </form>

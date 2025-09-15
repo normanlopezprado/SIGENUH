@@ -12,9 +12,9 @@
 
 
     @section('content')
-        <form method="POST" action="{{ route('hospital-services.store') }}">
+        <form method="POST" action="{{ route('servicios.store') }}">
             @csrf
-            @include('hospital_services.form', ['service' => new \App\Models\HospitalService()])
+            @include('servicios.form', ['service' => new \App\Models\HospitalService()])
         </form>
     @endsection
     @section('js')

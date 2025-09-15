@@ -12,10 +12,10 @@
 
 
 @section('content')
-    <form method="POST" action="{{ route('hospital-services.update', $hospitalService) }}">
+    <form method="POST" action="{{ route('servicios.update', $servicio) }}">
         @csrf
         @method('PUT')
-        @include('hospital_services.form', ['service' => $hospitalService])
+        @include('servicios.form', ['service' => $servicio])
     </form>
 @endsection
 @section('js')

@@ -22,8 +22,9 @@
 
                     </div>
                     <div class="col-md-12 form-floating form-label">
-                        <label for="email" class="form-label">ejemplo@ejemplo.com</label>
                         <input type="email" class="form-control" id="email" name="email" placeholder="ejemplo@ejemplo.com" value="{{ old('category', $hospital->email) }}" >
+                        <label for="email" class="form-label">ejemplo@ejemplo.com</label>
+
 
 
                     </div>

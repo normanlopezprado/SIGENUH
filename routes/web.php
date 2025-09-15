@@ -23,7 +23,6 @@ Route::post('/logout', [App\Http\Controllers\Auth\LoginController::class, 'logou
     ->name('logout');
 
 Route::resource('servicios', ServiceController::class)
-
     ->middleware(['auth']);
 
 

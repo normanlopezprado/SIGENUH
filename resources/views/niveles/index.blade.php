@@ -27,8 +27,12 @@
                     <tbody>
                     @forelse($niveles as $n)
                         <tr>
-                            <td>{{ $n->name }}</td>
-                            <td>{{ $n->status ? 'Activo' : 'Inactivo' }}</td>
+                            <td>
+                                {{ $n->name }}
+                            </td>
+                            <td>
+                                {{ $n->status ? 'Activo' : 'Inactivo' }}
+                            </td>
                             <td class="d-flex gap-2">
                                 <a class="btn btn-sm btn-warning" href="{{ route('niveles.edit', $n) }}">Editar</a>
                                 <form method="POST" action="{{ route('niveles.destroy', $n->id) }}" onsubmit="return confirm('¿Eliminar?')">
@@ -38,7 +42,12 @@
                             </td>
                         </tr>
                     @empty
-                        <tr><td colspan="5">Sin registros, <a href="{{ route('niveles.create') }}" class="btn btn-primary">Crear Nuevo</a></td></tr>
+                        <tr>
+                            <td colspan="5">
+                                Sin registros,
+                                <a href="{{ route('niveles.create') }}" class="btn btn-primary">Nuevo</a>
+                            </td>
+                        </tr>
                     @endforelse
                     </tbody>
                 </table>

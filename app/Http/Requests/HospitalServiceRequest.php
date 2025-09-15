@@ -4,29 +4,25 @@ namespace App\Http\Requests;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class ServiceRequest extends FormRequest
+class HospitalRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     */
     public function authorize(): bool
     {
-        return false;
+        return true; // ajusta si usas policies
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, \Illuminate\Contracts\Validation\ValidationRule|array<mixed>|string>
-     */
     public function rules(): array
     {
         return [
-            'name' => ['required','string','max:100'],
-            'abbreviation' => ['nullable','string','max:20'],
-            'category' => ['nullable','string','max:50'],
+            'name'        => ['required','string','max:120'],
+            'address'     => ['nullable','string','max:255'],
+            'email'       => ['nullable','email','max:255'],
+            'phone'       => ['nullable','string','max:20'],
             'description' => ['nullable','string'],
-            'status' => ['required','boolean'],
+            'logo_path'   => ['nullable','string','max:255'],
+            'icon_path'   => ['nullable','string','max:255'],
+            'latitude'    => ['nullable','numeric','between:-90,90'],
+            'longitude'   => ['nullable','numeric','between:-180,180'],
         ];
     }
 }

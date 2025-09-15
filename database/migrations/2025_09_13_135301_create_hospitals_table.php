@@ -11,10 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('hospitales', function (Blueprint $table) {
+        Schema::create('hospitals', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('name', 120);
             $table->string('address', 255)->nullable();
+            $table->string('email')->nullable();
+            $table->string('phone', 20)->nullable();
             $table->text('description')->nullable();
             $table->string('logo_path')->nullable(); // ruta del logo en storage
             $table->string('icon_path')->nullable(); // ruta del logo en storage
@@ -29,6 +31,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('hospitales');
+        Schema::dropIfExists('hospitals');
     }
 };

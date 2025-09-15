@@ -32,14 +32,14 @@
                         <label for="email" class="form-label">Correo electrónico</label>
                         <div class="form-icon">
                             <i class="ri-focus-line text-muted"></i>
-                            <input type="email" class="form-control form-control-icon" id="email" name="email" placeholder="Correo electrónico" value="{{ old('category', $hospital->email) }}" >
+                            <input type="email" class="form-control form-control-icon" id="email" name="email" placeholder="Correo electrónico" value="{{ old('email', $hospital->email) }}" >
                         </div>
                     </div>
                     <div class="col-md-6">
                         <label for="email" class="form-label">Teléfono</label>
                         <div class="form-icon">
                             <i class="ri-focus-line text-muted"></i>
-                            <input type="text" class="form-control form-control-icon" id="phone" name="phone" placeholder="Teléfono" value="{{ old('category', $hospital->phone) }}" >
+                            <input type="text" class="form-control form-control-icon" id="phone" name="phone" placeholder="Teléfono" value="{{ old('phone', $hospital->phone) }}" >
                         </div>
                     </div>
                     <div class="mb-3">
@@ -108,5 +108,3 @@
     <script src="{{ asset('assets/js/maps/leaflet-map.init.js') }}"></script>
 
 @endsection
-
-

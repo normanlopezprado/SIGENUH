@@ -133,12 +133,12 @@
         </a>
         <ul class="slide-menu" role="menu">
             <li class="slide">
-                <a href="/hospitales" class="side-menu__item" role="menuitem" data-lang="hr-vector-maps">Gestionar</a>
+                <a href="{{ route('hospitales.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-vector-maps">Gestionar</a>
             </li>
         </ul>
         <ul class="slide-menu" role="menu">
             <li class="slide">
-                <a href="/hospitales/create" class="side-menu__item" role="menuitem" data-lang="hr-vector-maps">Nuevo</a>
+                <a href="{{ route('hospitales.create') }}" class="side-menu__item" role="menuitem" data-lang="hr-vector-maps">Nuevo</a>
             </li>
         </ul>
     </li>

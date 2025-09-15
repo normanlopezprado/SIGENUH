@@ -24,7 +24,7 @@
     <form method="POST" action="{{ route('hospitales.update', $hospital) }}" enctype="multipart/form-data">
         @csrf
         @method('PUT')
-        @include('hospitales.form', ['hospital' => $hospital])
+        @include('hospitales.form', ['hospitales' => $hospital])
     </form>
 @endsection
 @section('js')

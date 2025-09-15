@@ -15,7 +15,7 @@ class HospitalController extends Controller
     public function index()
     {
         $hospitals = Hospital::latest()->paginate(10);
-        return view('hospitales.index', compact('hospitales'));
+        return view('hospitales.index', compact('hospitals'));
     }
 
     /**
@@ -43,7 +43,8 @@ class HospitalController extends Controller
             'longitude'   => ['nullable','numeric','between:-180,180'],
         ]);
         $uuid = (string) Str::uuid();
-        $data['id'] = $uuid; // <-- importante si tu PK es uuid
+        $data['id'] = $uuid;
+
         if ($request->hasFile('logo')) {
             $ext = $request->file('logo')->extension();
             $filename = "{$uuid}.{$ext}";
@@ -57,9 +58,9 @@ class HospitalController extends Controller
             $request->file('icon')->storeAs('icons', $filename, 'public');
             $data['icon_path'] = "icons/{$filename}";
         }
-        $hospital = Hospital::create($data);
+        Hospital::create($data);
 
-        return redirect()->route('hospitales.index', $hospital)
+        return redirect()->route('hospitales.index')
             ->with('success', 'Hospital creado correctamente.');
     }
 
@@ -119,7 +120,8 @@ class HospitalController extends Controller
             $data['icon_path'] = "icons/{$filename}";
         }
         $hospital->update($data);
-        return redirect()->route('hospitales.index', $hospital)
+
+        return redirect()->route('hospitales.show')
             ->with('success', 'Hospital actualizado correctamente.');
     }
 
@@ -131,6 +133,10 @@ class HospitalController extends Controller
         if ($hospital->logo_path) {
             Storage::disk('public')->delete($hospital->logo_path);
         }
+        if ($hospital->icon_path) {
+            Storage::disk('public')->delete($hospital->icon_path);
+        }
+
         $hospital->delete();
 
         return redirect()->route('hospitales.index')

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\HospitalService;
 use Illuminate\Http\Request;
-use App\Http\Requests\HospitalServiceRequest;
+
 class HospitalServiceController extends Controller
 {
     /**
@@ -14,7 +14,7 @@ class HospitalServiceController extends Controller
     {
         //
         $services = HospitalService::latest()->get();
-        return view('hospital_services.index', compact('services'));
+        return view('servicios.index', compact('services'));
     }
 
     /**
@@ -22,52 +22,52 @@ class HospitalServiceController extends Controller
      */
     public function create()
     {
-        return view('hospital_services.create');
+        return view('servicios.create');
     }
 
     /**
      * Store a newly created resource in storage.
      */
-    public function store(request $request)
+    public function store(Request $request)
     {
         HospitalService::create($request->all()); // si usas Request normal: $request->all() con fillable
-        return redirect()->route('hospital-services.index')
+        return redirect()->route('servicios.index')
             ->with('success', 'Servicio creado correctamente.');
     }
 
     /**
      * Display the specified resource.
      */
-    public function show(HospitalService $hospitalService)
+    public function show(HospitalService $servicio)
     {
-        return view('hospital_services.show', compact('hospitalService'));
+        return view('servicios.show', compact('hospitalService'));
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(HospitalService $hospitalService)
+    public function edit(HospitalService $servicio)
     {
-        return view('hospital_services.edit', compact('hospitalService'));
+        return view('servicios.edit', compact('servicio'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(request $request, HospitalService $hospitalService)
+    public function update(Request $request, HospitalService $servicio)
     {
-        $hospitalService->update($request->all());
-        return redirect()->route('hospital-services.index')
+        $servicio->update($request->all());
+        return redirect()->route('servicios.index')
             ->with('success', 'Servicio actualizado correctamente.');
     }
 
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(HospitalService $hospitalService)
+    public function destroy(HospitalService $servicio)
     {
-        $hospitalService->delete();
-        return redirect()->route('hospital-services.index')
+        $servicio->delete();
+        return redirect()->route('servicios.index')
             ->with('success', 'Servicio eliminado.');
     }
 }

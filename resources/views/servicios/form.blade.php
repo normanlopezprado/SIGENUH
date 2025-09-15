@@ -26,9 +26,9 @@
                                 <textarea name="description" id="description" class="form-control form-control-icon" rows="3">{{ old('description', $service->description) }}</textarea>
                             </div>
                         </div>
-                    <div form-label>
+                    <div class="mt-3">
                         <button type="submit" class="btn btn-primary">Guardar</button>
-                        <a href="{{ route('hospital-services.index') }}" class="btn btn-danger">Cancelar</a>
+                        <a href="{{ route('servicios.index') }}" class="btn btn-danger">Cancelar</a>
                     </div>
                 </div>
             </div>

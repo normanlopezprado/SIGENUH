@@ -20,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
             dom: '<"card-header dt-head d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3"' +
                 '<"head-label">' +
-                '<"d-flex flex-column flex-sm-row align-items-center justify-content-sm-end gap-3 w-100"f<"add_button">>' +
+                '<"d-flex flex-column flex-sm-row align-items-center justify-content-sm-end gap-3 w-100"<"add_button">f>' +
                 '>' +
                 '<"table-responsive"t>' +
                 '<"card-footer d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2"i' +
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function () {
             initComplete: function () {
                 const add_button = document.querySelector('.add_button');
                 add_button.innerHTML = `
-                    <a class="btn btn-primary" href="${basePath}/create" >Añadir datos</a>`;
+                    <a class="btn btn-primary" href="${basePath}/create">Nuevo</a>`;
             }
         });
 

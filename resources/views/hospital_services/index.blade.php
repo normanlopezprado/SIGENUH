@@ -1,7 +1,6 @@
 @extends('partials.layouts.master')
 
 @section('title', 'sigenuh')
-
 @section('sub-title', 'Servicios')
 @section('pagetitle', 'Inicio')
 @section('buttonTitle', 'Share')

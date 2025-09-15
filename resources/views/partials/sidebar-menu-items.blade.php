@@ -138,10 +138,10 @@
                 </a>
                 <ul class="slide-menu" role="menu">
                     <li class="slide">
-                        <a href="#" target="_blank" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Gestionar</a>
+                        <a href="{{ route('niveles.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Gestionar</a>
                     </li>
                     <li class="slide">
-                        <a href="#" target="_blank" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Nuevo</a>
+                        <a href="{{ route('niveles.create') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Nuevo</a>
                     </li>
                 </ul>
             </li>

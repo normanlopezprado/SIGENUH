@@ -15,70 +15,86 @@
             </li>
         </ul>
     </li>
+
     <li class="menu-title" role="presentation" data-lang="hr-title-applications">Departamento de nutrición</li>
-    <li class="slide">
-        <a href="#!" class="side-menu__item" role="menuitem">
-            <span class="side_menu_icon"><i class="ri-empathize-line"></i></span>
-            <span class="side-menu__label" data-lang="hr-apps">Nutrición</span>
-            <i class="ri-arrow-down-s-line side-menu__angle"></i>
-        </a>
-        <ul class="slide-menu" role="menu">
-            <li class="slide">
-                <a href="#!" class="side-menu__item" role="menuitem">
-                    <span class="side-menu__label" data-lang="hr-apps-email">Alimentos</span>
-                    <i class="ri-arrow-down-s-line side-menu__angle"></i>
-                </a>
-                <ul class="slide-menu" role="menu">
-                    <li class="slide">
-                        <a href="#" class="side-menu__item" role="menuitem" data-lang="hr-apps-email-inbox">Gestionar</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="slide">
-                <a href="#!" class="side-menu__item" role="menuitem">
-                    <span class="side-menu__label" data-lang="hr-apps-email">Bodega</span>
-                    <i class="ri-arrow-down-s-line side-menu__angle"></i>
-                </a>
-                <ul class="slide-menu" role="menu">
-                    <li class="slide">
-                        <a href="#" class="side-menu__item" role="menuitem" data-lang="hr-apps-email-inbox">Gestionar</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="slide">
-                <a href="#!" class="side-menu__item" role="menuitem">
-                    <span class="side-menu__label" data-lang="hr-apps-email">Carritos</span>
-                    <i class="ri-arrow-down-s-line side-menu__angle"></i>
-                </a>
-                <ul class="slide-menu" role="menu">
-                    <li class="slide">
-                        <a href="#" class="side-menu__item" role="menuitem" data-lang="hr-apps-email-inbox">Gestionar</a>
-                    </li>
-                </ul>
-            </li>
-            <li class="slide">
-                <a href="#!" class="side-menu__item" role="menuitem">
-                    <span class="side-menu__label" data-lang="hr-apps-email">Dietas</span>
-                    <i class="ri-arrow-down-s-line side-menu__angle"></i>
-                </a>
-                <ul class="slide-menu" role="menu">
-                    <li class="slide">
-                        <a href="#" class="side-menu__item" role="menuitem" data-lang="hr-apps-email-inbox">Gestionar</a>
-                    </li>
-                </ul>
+        <li class="slide">
+            <a href="#!" class="side-menu__item" role="menuitem">
+                <span class="side_menu_icon"><i class="ri-empathize-line"></i></span>
+                <span class="side-menu__label" data-lang="hr-apps">Nutrición</span>
+                <i class="ri-arrow-down-s-line side-menu__angle"></i>
+            </a>
+            <ul class="slide-menu" role="menu">
+                <li class="slide">
+                    <a href="#!" class="side-menu__item" role="menuitem">
+                        <span class="side-menu__label" data-lang="hr-apps-email">Registro</span>
+                        <i class="ri-arrow-down-s-line side-menu__angle"></i>
+                    </a>
+                    <ul class="slide-menu" role="menu">
+                        <li class="slide">
+                            <a href="#" class="side-menu__item" role="menuitem" data-lang="hr-apps-email-inbox">Gestionar</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="slide">
+                    <a href="#!" class="side-menu__item" role="menuitem">
+                        <span class="side-menu__label" data-lang="hr-apps-email">Alimentos</span>
+                        <i class="ri-arrow-down-s-line side-menu__angle"></i>
+                    </a>
+                    <ul class="slide-menu" role="menu">
+                        <li class="slide">
+                            <a href="#" class="side-menu__item" role="menuitem" data-lang="hr-apps-email-inbox">Gestionar</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="slide">
+                    <a href="#!" class="side-menu__item" role="menuitem">
+                        <span class="side-menu__label" data-lang="hr-apps-email">Bodega</span>
+                        <i class="ri-arrow-down-s-line side-menu__angle"></i>
+                    </a>
+                    <ul class="slide-menu" role="menu">
+                        <li class="slide">
+                            <a href="#" class="side-menu__item" role="menuitem" data-lang="hr-apps-email-inbox">Gestionar</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="slide">
+                    <a href="#!" class="side-menu__item" role="menuitem">
+                        <span class="side-menu__label" data-lang="hr-apps-email">Carritos</span>
+                        <i class="ri-arrow-down-s-line side-menu__angle"></i>
+                    </a>
+                    <ul class="slide-menu" role="menu">
+                        <li class="slide">
+                            <a href="#" class="side-menu__item" role="menuitem" data-lang="hr-apps-email-inbox">Gestionar</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="slide">
+                    <a href="#!" class="side-menu__item" role="menuitem">
+                        <span class="side-menu__label" data-lang="hr-apps-email">Dietas</span>
+                        <i class="ri-arrow-down-s-line side-menu__angle"></i>
+                    </a>
+                    <ul class="slide-menu" role="menu">
+                        <li class="slide">
+                            <a href="#" class="side-menu__item" role="menuitem" data-lang="hr-apps-email-inbox">Gestionar</a>
+                        </li>
+                    </ul>
             </li>
         </ul>
     </li>
-    <li class="menu-title" role="presentation" data-lang="hr-title-pages">Registro</li>
+    <li class="menu-title" role="presentation" data-lang="hr-title-pages">Recolección</li>
     <li class="slide">
         <a href="#!" class="side-menu__item" role="menuitem">
             <span class="side_menu_icon"><i class="ri-list-check-3"></i></span>
-            <span class="side-menu__label" data-lang="hr-pages">Registro</span>
+            <span class="side-menu__label" data-lang="hr-pages">Dietas</span>
             <i class="ri-arrow-down-s-line side-menu__angle"></i>
         </a>
         <ul class="slide-menu" role="menu">
             <li class="slide">
-                <a href="#" class="side-menu__item" role="menuitem" data-lang="hr-pages-start">Empezar</a>
+                <a href="#" class="side-menu__item" role="menuitem" data-lang="hr-pages-start">Recolectar</a>
             </li>
         </ul>
     </li>

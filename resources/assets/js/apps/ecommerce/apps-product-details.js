@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: Product Details init js
-*/
 
 document.addEventListener('DOMContentLoaded', function () {
     var thumbsSwiper = new Swiper(".thumbs-swiper", {

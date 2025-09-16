@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: apexcharts-timeline.init.js
-*/
 
 // Basic Range Area Chart
 const basicTimeLineChartEl = document.querySelector('#basic_timeLine_chart'),

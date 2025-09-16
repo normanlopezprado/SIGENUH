@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: apexcharts-area.init.js
-*/
 
 // Basic Area Chart
 const basicAreaChartEl = document.querySelector('#area_chart_basic'),

@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: Stepper init js
-*/
 
 document.querySelectorAll('.stepper, .form-steps-vertical').forEach(stepper => {
     const nextButtons = stepper.querySelectorAll('.nexttab');

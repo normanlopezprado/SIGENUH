@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: Modal init js
-*/
 
 document.addEventListener('DOMContentLoaded', () => {
     // Select all modals with the data-draggable attribute

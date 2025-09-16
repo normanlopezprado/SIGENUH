@@ -1,9 +1,4 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: Calendar init js
-*/
+
 
 const inlinePickerEl = document.querySelector('#inline-date-picker')
 if (inlinePickerEl) {

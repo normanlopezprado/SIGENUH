@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: chartjs.init.js
-*/
 
 // Utility function to get a Bootstrap CSS variable
 function getBootstrapVariable(variableName) {

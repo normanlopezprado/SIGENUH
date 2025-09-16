@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: apexcharts-column.init.js
-*/
 
 // Basic Area Chart
 const basicColumnChartEl = document.querySelector('#basic_column_chart'),

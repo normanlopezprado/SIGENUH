@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: apexcharts-pie.init.js
-*/
 
 // Simple Pie Chart
 const simplePieChartEl = document.querySelector('#simple_pie_chart'),

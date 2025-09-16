@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: apexcharts-boxplot.init.js
-*/
 
 // Basic Box Chart
 const basicBoxChartEl = document.querySelector('#basic_box_chart'),

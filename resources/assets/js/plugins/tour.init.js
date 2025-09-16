@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: Tour init js
-*/
 
 import Shepherd from '../../libs/shepherd.js/esm/shepherd.mjs';
 

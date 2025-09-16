@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: Pricing init js
-*/
 
 // Toggle functionality for monthly/yearly prices
 document.getElementById('toggleSwitch').addEventListener('change', function () {

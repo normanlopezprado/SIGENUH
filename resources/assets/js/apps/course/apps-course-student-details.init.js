@@ -1,9 +1,3 @@
-// /*
-// Template Name: Herozi - Admin & Dashboard Template
-// Author: SRBThemes
-// Contact: sup.srbthemes@gmail.com
-// File: Student Details init js
-// */
 
 'use strict';
 

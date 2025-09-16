@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: Scroll To Top Js File
-*/
 
 const scrollToTop = document.getElementById("progress-scroll");
 if (scrollToTop) {

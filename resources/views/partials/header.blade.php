@@ -126,15 +126,17 @@
                               <div class="col">
                                   <form action="{{ route('user.select-hospital', $h->id) }}" method="POST">
                                       @csrf
-                                      <button type="submit" class="dropdown-icon-item border-0 bg-transparent w-100">
+                                      <button type="submit" id="btnSender{{ $h->id }}" style="visibility: hidden;">
+                                      </button>
+                                      <a class="dropdown-icon-item" onclick="document.getElementById('btnSender{{ $h->id }}').click();">
                                           <div class="avatar border-0 avatar-item bg-light mx-auto mb-2">
-                                              <img src="{{ asset('storage/'.$h->icon_path) }}" alt="{{ $h->name }}">
+                                              <img src="storage/{{ $h->icon_path }}" />
                                           </div>
                                           <p class="mb-1 h6 fw-medium">{{ $h->name }}</p>
                                           <p class="mb-0 text-muted fs-11">{{ $h->description }}</p>
-                                      </button>
+                                      </a>
                                   </form>
-                                  
+
                               </div>
                           </div>
                           @endforeach

@@ -115,14 +115,34 @@
               <span class="visually-hidden">Seleccione un hospital</span>
               <i class="bi bi-grid"></i>
             </button>
-            <div class="dropdown-menu dropdown-menu-lg p-0 dropdown-menu-end">
-              <div class="card shadow-none mb-0 border-0">
-                <div class="card-header hstack gap-2">
-                  <h5 class="card-title mb-0 flex-grow-1">Seleccione un hospital</h5>
-                </div>
+              <div class="dropdown-menu dropdown-menu-lg p-0 dropdown-menu-end">
+                  <div class="card shadow-none mb-0 border-0">
+                      <div class="card-header hstack gap-2">
+                          <h5 class="card-title mb-0 flex-grow-1">Seleccione un hospital</h5>
+                      </div>
+                      <div class="card-body px-3">
+                          @foreach($hospitals_table as $h)
+                          <div class="row g-0">
+                              <div class="col">
+                                  <form action="{{ route('user.select-hospital', $h->id) }}" method="POST">
+                                      @csrf
+                                      <button type="submit" id="btnSender{{ $h->id }}" style="visibility: hidden;">
+                                      </button>
+                                      <a class="dropdown-icon-item" onclick="document.getElementById('btnSender{{ $h->id }}').click();">
+                                          <div class="avatar border-0 avatar-item bg-light mx-auto mb-2">
+                                              <img src="storage/{{ $h->icon_path }}" />
+                                          </div>
+                                          <p class="mb-1 h6 fw-medium">{{ $h->name }}</p>
+                                          <p class="mb-0 text-muted fs-11">{{ $h->description }}</p>
+                                      </a>
+                                  </form>
 
+                              </div>
+                          </div>
+                          @endforeach
+                      </div>
+                  </div>
               </div>
-            </div>
           </div>
           <!-- Fullscreen -->
           <button type="button" id="fullscreen-button" class="btn icon-btn btn-text-primary rounded-circle custom-toggle d-none d-sm-block" aria-pressed="false">
@@ -145,7 +165,7 @@
               <span class="position-absolute border-2 border border-white h-12px w-12px rounded-circle bg-success end-0 bottom-0"></span>
             </span>
             <span>
-              <span class="h6 d-none d-xl-inline-block text-start fw-semibold mb-0">Sophia Johnson</span>
+              <span class="h6 d-none d-xl-inline-block text-start fw-semibold mb-0">{{ Auth::user()->name }}</span>
               <span class="d-none d-xl-block fs-12 text-start text-muted">CEO</span>
             </span>
           </button>

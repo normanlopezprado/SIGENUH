@@ -7,7 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 class Hospital extends Model
 {
     protected $fillable = [
-        'id','name', 'description', 'address','email', 'phone', 'logo_path', 'icon_path', 'latitude', 'longitude'
+        'id','name', 'description', 'address','email', 'phone', 'logo_path', 'icon_path', 'latitude', 'longitude',
+        'status'
     ];
     public $incrementing = false;
     protected $keyType = 'string';

@@ -21,6 +21,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'hospital_selected'
     ];
 
     /**
@@ -44,5 +45,9 @@ class User extends Authenticatable
             'email_verified_at' => 'datetime',
             'password' => 'hashed',
         ];
+    }
+    public function hospital()
+    {
+        return $this->belongsTo(\App\Models\Hospital::class, 'hospital_selected');
     }
 }

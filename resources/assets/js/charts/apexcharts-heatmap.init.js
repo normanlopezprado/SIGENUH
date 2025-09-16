@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: apexcharts-heatmap.init.js
-*/
 
 // Basic Heatmap Chart
 function generateData(count, yrange) {

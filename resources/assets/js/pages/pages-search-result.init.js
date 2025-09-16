@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: Search init js
-*/
 
 let choicesMultiple = document.getElementById('choices-multiple-close-icon');
 if (choicesMultiple) {

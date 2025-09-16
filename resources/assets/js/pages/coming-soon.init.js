@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: Coming Soon init js
-*/
 
 const countdown = document.getElementById("countdown");
 if (countdown) {

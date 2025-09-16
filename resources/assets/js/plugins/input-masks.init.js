@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: Masks Js File
-*/
 
 // **------ 1 Date Input**
 new Cleave('#simple-date', {

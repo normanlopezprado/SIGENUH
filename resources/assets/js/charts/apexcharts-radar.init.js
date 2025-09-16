@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: apexcharts-radar.init.js
-*/
 
 // Basic Radar Chart
 const basicRadarChartEl = document.querySelector('#basic_radar_chart'),

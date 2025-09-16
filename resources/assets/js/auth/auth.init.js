@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: Auth init js
-*/
 
 const otpInputs = document.querySelectorAll('[data-otp-input]');
 

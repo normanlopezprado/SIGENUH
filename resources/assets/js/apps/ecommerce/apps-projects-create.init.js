@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: Project Create init js
-*/
 
 let createBlogEditor = document.getElementById('createBlogEditor');
 if (createBlogEditor) {

@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: apexcharts-slope.init.js
-*/
 
 // Basic Slope Chart
 const basicSlopeChartEl = document.querySelector('#basic_slope_chart'),

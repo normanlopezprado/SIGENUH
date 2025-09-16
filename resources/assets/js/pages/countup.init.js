@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: Countup Js File
-*/
 
 import { CountUp } from '../../libs/countup.js/countUp.min.js';
 

@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: echart-config.init.js
-*/
 
 // Array to store all chart instances
 var allCharts = [];

@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: apexcharts-line.init.js
-*/
 
 function getColor(color) {
     const value = getComputedStyle(document.documentElement).getPropertyValue(color).trim();

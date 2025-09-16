@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: apexcharts-candlestick.init.js
-*/
 
 // Basic Candlestick Chart
 const basicCandlestickChartEl = document.querySelector('#basic_candlestick_chart'),

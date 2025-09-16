@@ -1,9 +1,4 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: DataTable init js
-*/
+
 "use strict";
 
 document.addEventListener('DOMContentLoaded', function () {

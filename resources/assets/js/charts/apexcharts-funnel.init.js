@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: apexcharts-funnel.init.js
-*/
 
 // Basic Range Area Chart
 const recruitmentFunnelChartEl = document.querySelector('#recruitment_funnel_chart'),

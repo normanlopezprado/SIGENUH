@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: Rating init js
-*/
 
 // Reusable function to initialize star ratings
 function initStarRating(selector, options) {

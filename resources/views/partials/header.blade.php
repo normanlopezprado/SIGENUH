@@ -165,7 +165,7 @@
               <span class="position-absolute border-2 border border-white h-12px w-12px rounded-circle bg-success end-0 bottom-0"></span>
             </span>
             <span>
-              <span class="h6 d-none d-xl-inline-block text-start fw-semibold mb-0">{{ Auth::user()->name }}</span>
+              <span class="h6 d-none d-xl-inline-block text-start fw-semibold mb-0">{{ Auth::user()?->name ?? '' }}</span>
               <span class="d-none d-xl-block fs-12 text-start text-muted">CEO</span>
             </span>
           </button>

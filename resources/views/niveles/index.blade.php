@@ -1,6 +1,6 @@
 @extends('partials.layouts.master')
 
-@section('title', 'sigenuh')
+@section('title', 'SIGENUH')
 
 @section('sub-title', 'Niveles')
 @section('pagetitle', 'Inicio')

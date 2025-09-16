@@ -24,9 +24,6 @@
         </a>
         <ul class="slide-menu" role="menu">
             <li class="slide">
-                <a href="#" class="side-menu__item" role="menuitem" data-lang="hr-apps-calendar">Nuevo registro</a>
-            </li>
-            <li class="slide">
                 <a href="#!" class="side-menu__item" role="menuitem">
                     <span class="side-menu__label" data-lang="hr-apps-email">Alimentos</span>
                     <i class="ri-arrow-down-s-line side-menu__angle"></i>
@@ -110,9 +107,6 @@
             </li>
         </ul>
         <ul class="slide-menu" role="menu">
-            <li class="slide">
-                <a href="{{ route('hospitales.create') }}" class="side-menu__item" role="menuitem" data-lang="hr-vector-maps">Nuevo</a>
-            </li>
         </ul>
         <ul class="slide-menu" role="menu">
             <li class="slide">
@@ -125,9 +119,6 @@
                     <li class="slide">
                         <a href="{{ route('servicios.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Gestionar</a>
                     </li>
-                    <li class="slide">
-                        <a href="{{ route('servicios.create') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Nuevo</a>
-                    </li>
                 </ul>
             </li>
             <li class="slide">
@@ -139,9 +130,6 @@
                 <ul class="slide-menu" role="menu">
                     <li class="slide">
                         <a href="{{ route('niveles.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Gestionar</a>
-                    </li>
-                    <li class="slide">
-                        <a href="{{ route('niveles.create') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Nuevo</a>
                     </li>
                 </ul>
             </li>

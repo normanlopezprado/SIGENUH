@@ -153,7 +153,10 @@
                 </a>
                 <ul class="slide-menu" role="menu">
                     <li class="slide">
-                        <a href="{{ route('servicios.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Gestionar</a>
+                        <a href="{{ route('servicios.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Añadir</a>
+                    </li>
+                    <li class="slide">
+                        <a href="{{ route('servicios.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Asignar</a>
                     </li>
                 </ul>
             </li>

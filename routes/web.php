@@ -45,4 +45,5 @@ Route::post('/user/select-hospital/{hospital}', [UserHospitalController::class, 
 Route::middleware(['auth'])->group(function () {
     Route::get('hospital-floors', [HospitalFloorController::class, 'edit'])->name('hospital-floors.edit');
     Route::post('hospital-floors', [HospitalFloorController::class, 'update'])->name('hospital-floors.update');
+    
 });

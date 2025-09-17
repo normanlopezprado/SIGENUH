@@ -74,22 +74,18 @@
                             @endpush
                             <div class="mt-3">
                                 <button class="btn btn-primary">Guardar asignación</button>
-                                <a href="{{ route('dashboard') }}" class="btn btn-secondary">Cancelar</a>
+                                <a href="{{ route('dashboard') }}" class="btn btn-danger">Cancelar</a>
                             </div>
                         </form>
                     </div>
-
                 </div>
             </div>
         </div>
     </div>
 
-
-
-    @include('partials.social-share-modal')
+@include('partials.social-share-modal')
 
 @endsection
-
 @section('js')
 
     <!-- Datatable js -->

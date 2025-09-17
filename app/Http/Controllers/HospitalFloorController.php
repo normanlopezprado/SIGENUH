@@ -11,14 +11,24 @@ class HospitalFloorController extends Controller
     {
         $user = $request->user();
         $hospital = $user->hospital_selected;
+
         if (!$hospital) {
             return redirect()
                 ->route('dashboard')
                 ->with('warning', 'Selecciona un hospital antes de administrar los niveles.');
         }
-        $niveles = Nivel::where('status', true)->get();
+
+        $niveles = Nivel::where('status', true)->get()
+            ->sortBy(fn ($n) => (int) preg_replace('/\D+/', '', $n->name ?? ''))
+            ->reverse()
+            ->values()
+        ;
+
+
         $hospital = Hospital::where('id', $hospital)->first();
+
         $seleccionados = $hospital->niveles()->pluck('nivels.id')->toArray();
+
         return view('hospital_floors.edit', compact('hospital','niveles','seleccionados'));
     }
 

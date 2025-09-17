@@ -21,18 +21,4 @@ class HospitalFloor extends Model
             if (empty($model->id)) $model->id = (string)Str::uuid();
         });
     }
-
-    public function niveles()
-    {
-        return $this->belongsToMany(\App\Models\Nivel::class, 'hospital_floors', 'hospital_id', 'nivel_id')
-            ->using(\App\Models\HospitalFloor::class)
-            ->withTimestamps();
-    }
-
-    public function hospitals()
-    {
-        return $this->belongsToMany(\App\Models\Hospital::class, 'hospital_floors', 'nivel_id', 'hospital_id')
-            ->using(\App\Models\HospitalFloor::class)
-            ->withTimestamps();
-    }
 }

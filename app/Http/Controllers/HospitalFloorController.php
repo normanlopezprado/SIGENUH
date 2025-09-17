@@ -25,7 +25,7 @@ class HospitalFloorController extends Controller
     public function update(Request $request)
     {
         $user = $request->user();
-        $hospital = Hospital::findOrFail($user->hospital_id);
+        $hospital = Hospital::findOrFail($user->hospital_selected);
 
         $data = $request->validate([
             'niveles'   => ['array'],

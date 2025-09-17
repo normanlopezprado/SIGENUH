@@ -46,7 +46,7 @@
                                     <input
                                         type="checkbox"
                                         name="niveles[]"
-                                        class="form-check-input"
+                                        class="form-check-input nivel-item"
                                         value="{{ $n->id }}"
                                         @checked(in_array($n->id, old('niveles', $seleccionados)))
                                     >
@@ -64,7 +64,6 @@
                                 <script>
                                     document.addEventListener('DOMContentLoaded', () => {
                                         const checkAll = document.getElementById('checkAll');
-                                        alert(checkAll);
                                         const items = document.querySelectorAll('.nivel-item');
 
                                         checkAll?.addEventListener('change', (e) => {

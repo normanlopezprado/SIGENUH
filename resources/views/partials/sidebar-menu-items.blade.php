@@ -127,28 +127,79 @@
         <ul class="slide-menu" role="menu">
 
             <li class="slide">
-                <a href="#" class="side-menu__item" role="menuitem" data-lang="hr-pages-start">Recolectar</a>
+                <a href="#" class="side-menu__item" role="menuitem" data-lang="hr-pages-start">
+                    <i class="ri-keyboard-box-line"></i>
+                    Recolectar
+                </a>
             </li>
 
             <li class="slide">
-                <a href="#" class="side-menu__item" role="menuitem" data-lang="hr-pages-start">Beneficiarios</a>
+                <a href="#" class="side-menu__item" role="menuitem" data-lang="hr-pages-start">
+                    <i class="ri-user-smile-line"></i>
+                    Beneficiarios
+                </a>
             </li>
 
         </ul>
     </li>
+
     <li class="menu-title" role="presentation" data-lang="hr-title-tables">Administración</li>
+
+
+
     <li class="slide">
         <a href="#!" class="side-menu__item" role="menuitem">
-            <span class="side_menu_icon"><i class="ri-shield-user-line"></i></span>
-            <span class="side-menu__label" data-lang="hr-icons">Usuarios</span>
+            <span class="side_menu_icon"><i class="ri-shield-keyhole-line"></i></span>
+            <span class="side-menu__label" data-lang="hr-maps">Accesos</span>
             <i class="ri-arrow-down-s-line side-menu__angle"></i>
         </a>
-        <ul class="slide-menu" role="menu">
-            <li class="slide">
-                <a href="#" class="side-menu__item" role="menuitem" data-lang="hr-bootstrap-icons">Gestionar</a>
-            </li>
-        </ul>
+
+            <ul class="slide-menu" role="menu">
+                <li class="slide">
+                    <a href="{{ route('servicios.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">
+                        <i class="ri-shield-user-line"></i>
+                        Asignar
+                    </a>
+                </li>
+            </ul>
+
+            <ul class="slide-menu" role="menu">
+                <li class="slide">
+                    <a href="#!" class="side-menu__item" role="menuitem">
+                        <span><i class="ri-user-line"></i></span>
+                        <span class="side-menu__label" data-lang="hr-level-2-2">Usuarios</span>
+                        <i class="ri-arrow-down-s-line side-menu__angle"></i>
+                    </a>
+
+                    <ul class="slide-menu" role="menu">
+                        <li class="slide">
+                            <a href="{{ route('servicios.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">
+                                <i class="ri-user-add-line"></i>
+                                Nuevo
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="slide">
+                    <a href="#!" class="side-menu__item" role="menuitem">
+                        <span class="side_menu_icon"><i class="ri-shield-line"></i></span>
+                        <span class="side-menu__label" data-lang="hr-layout">Roles</span>
+                        <i class="ri-arrow-down-s-line side-menu__angle"></i>
+                    </a>
+
+                    <ul class="slide-menu" role="menu">
+                        <li class="slide">
+                            <a href="{{ route('niveles.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">
+                                <i class="ri-shield-cross-line"></i>
+                                Nuevo
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
     </li>
+
     <li class="slide">
         <a href="#!" class="side-menu__item" role="menuitem">
             <span class="side_menu_icon"><i class="ri-hospital-line"></i></span>

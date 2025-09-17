@@ -11,6 +11,7 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('hospital_floors', function (Blueprint $table) {
+            $table->uuid('id')->primary();
             $table->uuid('hospital_id');
             $table->uuid('nivel_id');
             $table->timestamps();

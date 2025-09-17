@@ -4,7 +4,8 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
-
+use App\Models\Hospital;
+use App\Models\HospitalFloor;
 class Nivel extends Model
 {
     protected $table = 'nivels';
@@ -23,5 +24,11 @@ class Nivel extends Model
                 $model->id = (string) Str::uuid();
             }
         });
+    }
+    public function hospitals()
+    {
+        return $this->belongsToMany(Hospital::class, 'hospital_floors', 'nivel_id', 'hospital_id')
+            ->using(HospitalFloor::class)
+            ->withTimestamps();
     }
 }

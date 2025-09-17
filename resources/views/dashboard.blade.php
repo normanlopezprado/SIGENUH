@@ -12,7 +12,13 @@
 @endsection
 
 @section('content')
+    @if (session('warning'))
+        <div class="alert alert-warning">{{ session('warning') }}</div>
+    @endif
 
+    @if (session('error'))
+        <div class="alert alert-danger">{{ session('error') }}</div>
+    @endif
     <div class="row">
         <div class="col-lg-4">
             <div class="card card-hover overflow-hidden">
@@ -800,7 +806,7 @@
             </div>
         </div>
 
-    
+
     </div>
 @endsection
 

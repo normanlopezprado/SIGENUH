@@ -34,7 +34,7 @@
             @include('partials.bottom-wrapper')
             @include('partials.datatable-script')
             @yield('js')
-
+    @stack('scripts')
 </body>
 
 </html>

@@ -11,14 +11,13 @@ return new class extends Migration {
     public function up(): void
     {
         Schema::create('hospital_floors', function (Blueprint $table) {
-            $table->uuid('id')->primary();               // UUID propio
             $table->uuid('hospital_id');
             $table->uuid('nivel_id');
             $table->timestamps();
 
+            $table->primary(['hospital_id', 'nivel_id']); // o unique, como prefieras
             $table->foreign('hospital_id')->references('id')->on('hospitals')->onDelete('cascade');
-            $table->foreign('nivel_id')->references('id')->on('nivels')->onDelete('cascade');
-            $table->unique(['hospital_id', 'nivel_id']);
+            $table->foreign('nivel_id')->references('id')->on('nivels')->onDelete('cascade'); // o 'niveles'
         });
     }
 

@@ -31,10 +31,9 @@ class Hospital extends Model
         return $this->icon_path ? asset('storage/' . $this->icon_path) : null;
     }
 
-    public function niveles(): BelongsToMany
+    public function niveles()
     {
         return $this->belongsToMany(Nivel::class, 'hospital_floors', 'hospital_id', 'nivel_id')
-            ->using(HospitalFloor::class)
             ->withTimestamps();
     }
 }

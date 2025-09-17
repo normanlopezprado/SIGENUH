@@ -139,10 +139,7 @@
         </a>
         <ul class="slide-menu" role="menu">
             <li class="slide">
-                <a href="{{ route('hospitales.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-vector-maps">Gestionar</a>
-            </li>
-            <li class="slide">
-                <a href="{{ route('hospital-floors.edit') }}" class="side-menu__item" role="menuitem" data-lang="hr-vector-maps">Asignación de plantas</a>
+                <a href="{{ route('hospitales.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-vector-maps">Añadir</a>
             </li>
         </ul>
         <ul class="slide-menu" role="menu">

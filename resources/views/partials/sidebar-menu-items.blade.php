@@ -168,7 +168,10 @@
                 </a>
                 <ul class="slide-menu" role="menu">
                     <li class="slide">
-                        <a href="{{ route('niveles.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Gestionar</a>
+                        <a href="{{ route('niveles.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">Añadir</a>
+                    </li>
+                    <li class="slide">
+                        <a href="{{ route('hospital-floors.edit') }}" class="side-menu__item" role="menuitem" data-lang="hr-vector-maps">Asignar</a>
                     </li>
                 </ul>
             </li>

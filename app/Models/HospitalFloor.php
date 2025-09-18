@@ -13,12 +13,14 @@ class HospitalFloor extends Model
     public $incrementing = false;
     protected $keyType = 'string';
 
-    protected $fillable = ['hospital_id', 'nivel_id'];
+    protected $fillable = ['id', 'hospital_id', 'nivel_id'];
 
     protected static function booted()
     {
         static::creating(function ($model) {
-            if (empty($model->id)) $model->id = (string)Str::uuid();
+            if (empty($model->id)) {
+                $model->id = (string) Str::uuid();
+            }
         });
     }
     public function hospital()

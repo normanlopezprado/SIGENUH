@@ -4,7 +4,9 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use App\Models\Nivel;
+use App\Models\HospitalFloor;
 class Hospital extends Model
 {
     protected $fillable = [
@@ -34,6 +36,11 @@ class Hospital extends Model
     public function niveles()
     {
         return $this->belongsToMany(Nivel::class, 'hospital_floors', 'hospital_id', 'nivel_id')
+            ->using(HospitalFloor::class)
             ->withTimestamps();
+    }
+    public function floors(): HasMany
+    {
+        return $this->hasMany(HospitalFloor::class, 'hospital_id');
     }
 }

@@ -50,7 +50,7 @@ class HospitalFloorServiceController extends Controller
         $data = $request->validate([
             'floor'       => ['required','uuid','exists:hospital_floors,id'],
             'services'    => ['array'],
-            'services.*'  => ['uuid','exists:services,id'], // 👈 ahora services.id es UUID
+            'services.*'  => ['uuid','exists:services,id'], 
         ]);
 
         $floor = HospitalFloor::where('id', $data['floor'])

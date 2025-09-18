@@ -52,7 +52,6 @@
                             <form method="POST" action="{{ route('hospital-floor-services.update') }}">
                                 @csrf
                                 <input type="hidden" name="floor" value="{{ $selectedFloor->id }}">
-
                                 <div class="mb-2">
                                     <label class="form-check">
                                         <input type="checkbox" id="checkAll" class="form-check-input">

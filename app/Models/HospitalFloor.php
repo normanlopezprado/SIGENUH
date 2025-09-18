@@ -34,7 +34,7 @@ class HospitalFloor extends Pivot
 
     public function services()
     {
-        return $this->belongsToMany(HospitalService::class, 'hospital_floor_services', 'hospital_floor_id', 'hospital_service_id')
+        return $this->belongsToMany(Service::class, 'hospital_floor_services', 'hospital_floor_id', 'service_id')
             ->withTimestamps();
     }
 }

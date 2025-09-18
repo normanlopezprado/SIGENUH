@@ -21,4 +21,13 @@ class Service extends Model
             }
         });
     }
+    public function hospitalFloors()
+    {
+        return $this->belongsToMany(
+            HospitalFloor::class,
+            'hospital_floor_services',
+            'service_id',
+            'hospital_floor_id'
+        )->withTimestamps();
+    }
 }

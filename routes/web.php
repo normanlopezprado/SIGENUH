@@ -9,6 +9,7 @@ use App\Http\Controllers\HospitalController;
 use App\Http\Controllers\NivelController;
 use App\Http\Controllers\UserHospitalController;
 use App\Http\Controllers\HospitalFloorController;
+use App\Http\Controllers\HospitalFloorServiceController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -45,4 +46,11 @@ Route::post('/user/select-hospital/{hospital}', [UserHospitalController::class, 
 Route::middleware(['auth'])->group(function () {
     Route::get('hospital-floors', [HospitalFloorController::class, 'edit'])->name('hospital-floors.edit');
     Route::post('hospital-floors', [HospitalFloorController::class, 'update'])->name('hospital-floors.update');
+});
+
+Route::middleware('auth')->group(function () {
+    Route::get('/hospital-floor-services',  [HospitalFloorServiceController::class, 'edit'])
+        ->name('hospital-floor-services.edit');
+    Route::post('/hospital-floor-services', [HospitalFloorServiceController::class, 'update'])
+        ->name('hospital-floor-services.update');
 });

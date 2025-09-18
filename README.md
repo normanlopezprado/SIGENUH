@@ -23,7 +23,7 @@ yarn install
 ## 🗄️ DataBase
 
 php artisan migrate
-
+php artisan db:seed --class=HospitalServiceSeeder
 
 ### 🧑🏻‍💻 Usuarios
 

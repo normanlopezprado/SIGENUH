@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Support\Str;
-
+use App\Models\HospitalFloorService;
 class Service extends Model
 {
     public $incrementing = false;
@@ -28,6 +28,8 @@ class Service extends Model
             'hospital_floor_services',
             'service_id',
             'hospital_floor_id'
-        )->withTimestamps();
+        )
+            ->using(HospitalFloorService::class)
+            ->withTimestamps();
     }
 }

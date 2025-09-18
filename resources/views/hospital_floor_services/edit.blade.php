@@ -2,7 +2,7 @@
 
 @section('title', 'SIGENUH')
 
-@section('sub-title', 'Hospitales -> Selección de plantas ')
+@section('sub-title', 'Hospitales -> Selección de Servicios por plantas ')
 @section('pagetitle', 'Inicio')
 @section('buttonTitle', 'Share')
 
@@ -16,7 +16,7 @@
         <div class="col-12 col-lg-6">
             <div class="card h-100 mb-0">
                 <div class="card-header">
-                    <h5 class="card-title mb-0">Selección de plantas</h5>
+                    <h5 class="card-title mb-0">Selección de Servicios por plantas</h5>
                 </div>
                 <div class="card-body">
                     @if(session('success'))
@@ -47,7 +47,7 @@
                                 <button class="btn btn-secondary w-100">Cambiar piso</button>
                             </div>
                         </form>
-
+                        <hr>
                         @if($selectedFloor)
                             <form method="POST" action="{{ route('hospital-floor-services.update') }}">
                                 @csrf
@@ -58,25 +58,26 @@
                                         <span class="form-check-label">Seleccionar todos</span>
                                     </label>
                                 </div>
+                                <hr>
 
-                                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-2">
+                                <div class="col-md-12 form-floating form-label">
                                     @foreach($services as $s)
-                                        <div class="col">
-                                            <label class="form-check border rounded p-2 d-flex align-items-center gap-2">
+                                        <div class="col-md-12 form-label">
+                                            <label class="form-check-label">
                                                 <input type="checkbox"
                                                        class="form-check-input service-item"
                                                        name="services[]"
                                                        value="{{ $s->id }}"
                                                     @checked(in_array($s->id, old('services', $selectedServiceIds)))>
                                                 <span><strong>{{ $s->name }}</strong>
-            @if(!empty($s->abbreviation)) <small class="text-muted ms-1">({{ $s->abbreviation }})</small> @endif
-          </span>
+                                                @if(!empty($s->abbreviation)) <small class="text-muted ms-1">({{ $s->abbreviation }})</small> @endif
+                                              </span>
                                             </label>
                                         </div>
                                     @endforeach
                                 </div>
 
-                                <div class="mt-3 d-flex gap-2">
+                                <div class="mt-3">
                                     <button class="btn btn-primary">Guardar</button>
                                     <a href="{{ route('dashboard') }}" class="btn btn-secondary">Cancelar</a>
                                 </div>

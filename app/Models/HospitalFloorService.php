@@ -2,10 +2,10 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\Pivot;
 use Illuminate\Support\Str;
 
-class HospitalFloorService extends Model
+class HospitalFloorService extends Pivot
 {
     protected $table = 'hospital_floor_services';
 

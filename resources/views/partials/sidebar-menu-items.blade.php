@@ -232,7 +232,7 @@
                         </a>
                     </li>
                     <li class="slide">
-                        <a href="{{ route('servicios.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">
+                        <a href="{{ route('hospital-floor-services.edit') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">
                             <i class="ri-link-unlink-m"></i>
                             Asignar
                         </a>

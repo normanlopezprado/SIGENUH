@@ -24,9 +24,20 @@
         </div>
 
         <div class="mb-3">
-            <label for="hospital_floor_service_id" class="form-label">HospitalFloorService</label>
-            <input type="text" name="hospital_floor_service_id" id="hospital_floor_service_id" class="form-control" value="{{ old('hospital_floor_service_id') }}" required>
-            @error('hospital_floor_service_id') <div class="text-danger">{{ $message }}</div> @enderror
+            <label class="form-label">Servicio del piso (del hospital seleccionado)</label>
+            <select name="hospital_floor_service_id" class="form-control" required>
+                <option value="">— Seleccione —</option>
+                @foreach($hfs as $row)
+                    @php
+                        $nivel = $row->hospitalFloor?->nivel?->name ?? 'Nivel';
+                        $serv  = $row->service?->name ?? 'Servicio';
+                    @endphp
+                    <option value="{{ $row->id }}" @selected(old('hospital_floor_service_id')===$row->id)>
+                        {{ $nivel }} — {{ $serv }}
+                    </option>
+                @endforeach
+            </select>
+            @error('hospital_floor_service_id')<div class="text-danger">{{ $message }}</div>@enderror
         </div>
 
         <button type="submit" class="btn btn-success">💾 Guardar</button>

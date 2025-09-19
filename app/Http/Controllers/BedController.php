@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Bed;
 use App\Models\HospitalFloorService;
+use App\Models\Service;
 use Illuminate\Http\Request;
 
 class BedController extends Controller
@@ -20,10 +21,18 @@ class BedController extends Controller
     /**
      * Show the form for creating a new resource.
      */
-    public function create()
+    public function create(Request $request)
     {
-        $services = HospitalFloorService::all();
-        return view('beds.create', compact('services'));
+        $hospitalId = $request->user()->hospital_selected;
+        if (!$hospitalId) {
+            return redirect()->route('dashboard')
+                ->with('warning', 'Selecciona un hospital antes de crear una cama.');
+        }
+        $hfs = HospitalFloorService::with(['service', 'hospitalFloor.nivel'])
+            ->whereHas('hospitalFloor', fn($q) => $q->where('hospital_id', $hospitalId))
+            ->orderBy(Service::select('name')->whereColumn('services.id', 'hospital_floor_services.service_id'))
+            ->get();
+        return view('beds.create', compact('hfs'));
     }
 
     /**

@@ -58,16 +58,16 @@
                                     <textarea name="notes" id="notes" class="form-control">{{ old('notes') }}</textarea>
                                 </div>
                                 <div class="col-md-6 form-label">
-                                    <label class="form-label">Servicio del piso (del hospital seleccionado)</label>
+                                    <label class="form-label">Selección del Servicio</label>
                                     <select name="hospital_floor_service_id" class="form-select mb-4" required>
                                         <option value="">— Seleccione —</option>
                                         @foreach($hfs as $row)
                                             @php
                                                 $nivel = $row->hospitalFloor?->nivel?->name ?? 'Nivel';
-                                                $serv  = $row->service?->name ?? 'Servicio';
+                                                $serv  = $row->service?->name . ' ' . $row->service?->category . ' (' . $row->service?->abbreviation . ')';
                                             @endphp
                                             <option value="{{ $row->id }}" @selected(old('hospital_floor_service_id')===$row->id)>
-                                                {{ $nivel }} — {{ $serv }}
+                                                {{ $nivel }} —> {{ $serv }}
                                             </option>
                                         @endforeach
                                     </select>

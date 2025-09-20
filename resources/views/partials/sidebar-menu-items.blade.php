@@ -154,28 +154,21 @@
             <i class="ri-arrow-down-s-line side-menu__angle"></i>
         </a>
 
-            <ul class="slide-menu" role="menu">
-                <li class="slide">
-                    <a href="{{ route('servicios.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">
-                        <i class="ri-shield-user-line"></i>
-                        Asignar
-                    </a>
-                </li>
-            </ul>
+
 
             <ul class="slide-menu" role="menu">
                 <li class="slide">
                     <a href="#!" class="side-menu__item" role="menuitem">
-                        <span><i class="ri-user-line"></i></span>
+                        <span><i class="ri-shield-user-line"></i></span>
                         <span class="side-menu__label" data-lang="hr-level-2-2">Usuarios</span>
                         <i class="ri-arrow-down-s-line side-menu__angle"></i>
                     </a>
 
                     <ul class="slide-menu" role="menu">
                         <li class="slide">
-                            <a href="{{ route('servicios.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">
-                                <i class="ri-user-add-line"></i>
-                                Nuevo
+                            <a href="{{ route('usuarios.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">
+                                <i class="ri-key-2-line"></i>
+                                Gestionar
                             </a>
                         </li>
                     </ul>

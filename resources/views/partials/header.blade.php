@@ -160,7 +160,7 @@
           <button type="button" id="accountNavbarDropdown" class="btn profile-btn shadow-none px-0 hstack gap-0 gap-sm-3" data-bs-toggle="dropdown" aria-expanded="false" data-bs-auto-close="outside" data-bs-dropdown-animation>
             <span class="position-relative">
               <span class="avatar-item avatar overflow-hidden">
-                <img class="img-fluid" src="{{ asset('assets/images/avatar/13881101.jpg') }}" alt="avatar image">
+                <img class="img-fluid" src="{{ asset(Auth::user()?->avatar_url ?? 'avatars/default.jpg') }}" alt="avatar image">
               </span>
               <span class="position-absolute border-2 border border-white h-12px w-12px rounded-circle bg-success end-0 bottom-0"></span>
             </span>

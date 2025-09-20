@@ -33,7 +33,7 @@
             @method('PUT')
             <div class="col-md-12 form-floating form-label">
                 <div class="col-md-6 form-label">
-                    <label for="code" class="form-label">Código</label>
+                    <label for="code" class="form-label">Número</label>
                     <input type="text" name="code" id="code" class="form-control" value="{{ old('code', $bed->code) }}" required>
                     @error('code') <div class="text-danger">{{ $message }}</div> @enderror
                 </div>

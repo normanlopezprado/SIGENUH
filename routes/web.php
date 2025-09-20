@@ -57,3 +57,10 @@ Route::middleware('auth')->group(function () {
     Route::post('/hospital-floor-services', [HospitalFloorServiceController::class, 'update'])
         ->name('hospital-floor-services.update');
 });
+
+Route::resource('beds', BedController::class)
+    ->middleware('auth');
+
+Route::resource('usuarios', UserController::class)
+    ->parameters(['usuarios' => 'usuario'])
+    ->middleware(['auth']);

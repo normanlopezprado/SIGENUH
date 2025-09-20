@@ -217,7 +217,6 @@
         <ul class="slide-menu" role="menu">
         </ul>
         <ul class="slide-menu" role="menu">
-
             <li class="slide">
                 <a href="#!" class="side-menu__item" role="menuitem">
                     <span><i class="ri-service-line"></i></span>
@@ -234,7 +233,13 @@
                     <li class="slide">
                         <a href="{{ route('hospital-floor-services.edit') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">
                             <i class="ri-link-unlink-m"></i>
-                            Asignar
+                            Asignar Servicios
+                        </a>
+                    </li>
+                    <li class="slide">
+                        <a href="{{ route('beds.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">
+                            <i class="ri-hotel-bed-line"></i>
+                            Camas
                         </a>
                     </li>
                 </ul>

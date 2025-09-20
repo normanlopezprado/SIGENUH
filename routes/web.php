@@ -11,6 +11,7 @@ use App\Http\Controllers\UserHospitalController;
 use App\Http\Controllers\HospitalFloorController;
 use App\Http\Controllers\HospitalFloorServiceController;
 use App\Http\Controllers\BedController;
+use App\Http\Controllers\UserController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -56,6 +57,3 @@ Route::middleware('auth')->group(function () {
     Route::post('/hospital-floor-services', [HospitalFloorServiceController::class, 'update'])
         ->name('hospital-floor-services.update');
 });
-
-Route::resource('beds', BedController::class)
-    ->middleware('auth');

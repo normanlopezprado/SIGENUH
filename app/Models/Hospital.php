@@ -28,6 +28,7 @@ class Hospital extends Model
     {
         return $this->logo_path ? asset('storage/' . $this->logo_path) : null;
     }
+    
     public function getIconUrlAttribute(): ?string
     {
         return $this->icon_path ? asset('storage/' . $this->icon_path) : null;

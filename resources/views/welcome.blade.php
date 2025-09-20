@@ -21,7 +21,7 @@
                             <div class="mb-5">
                                 <label class="form-label" for="login-email">Usuario<span class="text-danger ms-1">*</span>
                                 </label>
-                                <input type="text" class="form-control" id="login-email" name="email" required  placeholder="Ingresa tu usuario">
+                                <input type="text" class="form-control" id="login-email" name="user" required  placeholder="Ingresa tu usuario">
                             </div>
 
                             <div class="mb-5">

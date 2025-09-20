@@ -26,7 +26,6 @@
                         <label for="email" class="form-label">ejemplo@ejemplo.com</label>
 
 
-
                     </div>
                     <div class="col-md-12 form-floating form-label">
                         <input type="text" class="form-control" id="phone" name="phone" placeholder="Teléfono" value="{{ old('category', $hospital->phone) }}" >

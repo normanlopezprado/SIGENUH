@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: vector-maps File
-*/
 
 var worldemapmarkers = new jsVectorMap({
     selector: "#world-map", // Use the correct selector

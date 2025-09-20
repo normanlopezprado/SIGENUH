@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: apexcharts-line.init.js
-*/
 
 // Basic Line Chart
 const basicLineChartEl = document.querySelector('#basic_line_chart'),

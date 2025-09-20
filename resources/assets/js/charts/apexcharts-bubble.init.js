@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: apexcharts-bubble.init.js
-*/
 
 // Basic Bubble Chart
 function generateData(baseval, count, yrange) {

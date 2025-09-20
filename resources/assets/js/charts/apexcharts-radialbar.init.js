@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: apexcharts-radialbar.init.js
-*/
 
 // Basic Polararea Chart
 const basicRadialbarChartEl = document.querySelector('#basic_radialbar_chart'),

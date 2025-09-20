@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: Gridjs init js
-*/
 
 const basicTable = document.getElementById("gridjs_basic-table");
 if (basicTable) {

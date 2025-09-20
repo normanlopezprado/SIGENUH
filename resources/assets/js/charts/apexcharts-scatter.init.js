@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: apexcharts-scatter.init.js
-*/
 
 // Basic Scatter Chart
 const basicScatterChartEl = document.querySelector('#basic_scatter_chart'),

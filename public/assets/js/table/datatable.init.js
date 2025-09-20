@@ -12,75 +12,38 @@ document.addEventListener('DOMContentLoaded', function () {
     const dataTableSelect = document.querySelector('.data-table-select');
     const dataTableAdded = document.querySelector('.data-table-added');
     const dataTableResponsive = document.querySelector('.data-table-responsive');
-
     // dataTableBasic datatable initialization
     if (dataTableBasic) {
+        const basePath = window.location.pathname.replace(/\/$/, "");
+
         const dataTableBasicType = new DataTable(dataTableBasic, {
-            ajax: 'assets/json/table/ui-data-table-basic.json', // JSON source for data
-            columns: [
-                { data: 'full_name' },
-                { data: 'email' },
-                { data: 'start_date' },
-                { data: 'salary' },
-                { data: 'age' },
-                { data: '' }
-            ],
-            columnDefs: [
-                {
-                    targets: 0,
-                    render: function (data, type, full) {
-                        return `
-                        <div class="d-flex gap-3 justify-content-start align-items-center">
-                            <div class="avatar avatar-sm">
-                                <img src="${full.avatar_image}" alt="Avatar" class="avatar-item avatar rounded-circle">
-                            </div>
-                            <div class="d-flex flex-column">
-                                <a href="#!" class="text-truncate text-heading">
-                                    <p class="mb-0 fw-medium">${full.full_name}</p>
-                                </a>
-                                <small class="text-truncate">${full.designation}</small>
-                            </div>
-                        </div>
-                    `
-                    }
-                },
-                {
-                    // Actions
-                    targets: 5,
-                    orderable: false,
-                    searchable: false,
-                    render: function () {
-                        return `
-                        <div class="hstack gap-2 fs-15">
-                            <a href="#!" class="btn icon-btn-sm btn-light-primary">
-                                <i class="ri-pencil-line"></i>
-                            </a>
-                            <a href="#!" class="btn icon-btn-sm btn-light-danger delete-item">
-                                <i class="ri-delete-bin-line"></i>
-                            </a>
-                        </div>`;
-                    }
-                }
-            ],
+
             dom: '<"card-header dt-head d-flex flex-column flex-sm-row justify-content-between align-items-center gap-3"' +
                 '<"head-label">' +
-                '<"d-flex flex-column flex-sm-row align-items-center justify-content-sm-end gap-3 w-100"f>' +
+                '<"d-flex flex-column flex-sm-row align-items-center justify-content-sm-end gap-3 w-100"<"add_button">f>' +
                 '>' +
                 '<"table-responsive"t>' +
                 '<"card-footer d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2"i' +
                 '<"d-flex align-items-sm-center justify-content-end gap-4">p' +
                 '>',
             language: {
+                url: 'http://cdn.datatables.net/plug-ins/2.3.4/i18n/es-ES.json',
                 sLengthMenu: 'Show _MENU_',
                 search: '',
-                searchPlaceholder: 'Search Files',
+                searchPlaceholder: 'Buscar',
                 paginate: {
                     next: '<i class="ri-arrow-right-s-line"></i>',
                     previous: '<i class="ri-arrow-left-s-line"></i>'
                 }
             },
+
             lengthMenu: [10, 20, 50],
-            pageLength: 10,
+            pageLength: 50,
+            initComplete: function () {
+                const add_button = document.querySelector('.add_button');
+                add_button.innerHTML = `
+                    <a class="btn btn-primary" href="${basePath}/create">Nuevo</a>`;
+            }
         });
 
         document.querySelector('div.head-label').innerHTML = '<h5 class="card-title text-nowrap mb-0">Basic Data-Table</h5>';

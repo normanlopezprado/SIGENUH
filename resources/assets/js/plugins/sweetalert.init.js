@@ -1,9 +1,4 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: sweetalert.init.js
-*/
+
 const commonAlertOptions = {
     customClass: {
         confirmButton: 'btn btn-primary',

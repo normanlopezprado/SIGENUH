@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: Bootstrap Icons init js
-*/
 
 const iconList = document.getElementById('iconList');
 const searchInput = document.getElementById('iconSearch');

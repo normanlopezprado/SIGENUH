@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: Chat init js
-*/
 
 document.addEventListener('DOMContentLoaded', function () {
     // Initialize Choices.js without search

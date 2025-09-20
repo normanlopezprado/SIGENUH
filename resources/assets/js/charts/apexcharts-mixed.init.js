@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: apexcharts-mixed.init.js
-*/
 
 // Line Column Chart
 const lineColumnChartEl = document.querySelector('#line_column_chart'),

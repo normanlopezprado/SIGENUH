@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: apexcharts-range-area.init.js
-*/
 
 // Basic Range Area Chart
 const basicRangeAreaChartEl = document.querySelector('#basic_range_area_chart'),

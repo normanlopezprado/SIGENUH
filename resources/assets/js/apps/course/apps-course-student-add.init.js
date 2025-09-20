@@ -1,9 +1,3 @@
-/*
-Template Name: Herozi - Admin & Dashboard Template
-Author: SRBThemes
-Contact: sup.srbthemes@gmail.com
-File: Online Course Studnet Create init js
-*/
 
 let selectClient = document.getElementById('select-gender');
 if (selectClient) {

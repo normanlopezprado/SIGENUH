@@ -22,7 +22,9 @@ class DatabaseSeeder extends Seeder
         User::firstOrCreate(
             ['email' => 'root@gmail.com'], // evitar duplicados
             [
-                'name'     => 'Admin',
+                'name'     => 'Norman Daniel López Prado',
+                'user'     => 'nodalopr',
+                'email'    => 'root@gmail.com',
                 'password' => Hash::make('admin'),
             ]
         );

@@ -11,9 +11,11 @@ class NivelesSeeder extends Seeder
     public function run(): void
     {
         $niveles = [
-            ['id' => (string) Str::uuid(), 'name' => '1er Piso', 'status' => true],
-            ['id' => (string) Str::uuid(), 'name' => '2do Piso', 'status' => true],
-            ['id' => (string) Str::uuid(), 'name' => '3er Piso', 'status' => true],
+            ['id' => (string) Str::uuid(), 'name' => '1ro', 'status' => true],
+            ['id' => (string) Str::uuid(), 'name' => '2do', 'status' => true],
+            ['id' => (string) Str::uuid(), 'name' => '3ro', 'status' => true],
+            ['id' => (string) Str::uuid(), 'name' => '4to', 'status' => true],
+            ['id' => (string) Str::uuid(), 'name' => '5to', 'status' => true],
         ];
 
         foreach ($niveles as $nivel) {

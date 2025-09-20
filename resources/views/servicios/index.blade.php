@@ -1,7 +1,7 @@
 @extends('partials.layouts.master')
 
 @section('title', 'SIGENUH')
-@section('sub-title', 'Servicios')
+@section('sub-title', 'Hospitales -> Servicios')
 @section('pagetitle', 'Inicio')
 @section('buttonTitle', 'Share')
 

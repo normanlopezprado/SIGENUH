@@ -2,7 +2,7 @@
 
 @section('title', 'SIGENUH')
 
-@section('sub-title', 'Niveles')
+@section('sub-title', 'Hospitales -> Plantas')
 @section('pagetitle', 'Inicio')
 @section('buttonTitle', 'Share')
 

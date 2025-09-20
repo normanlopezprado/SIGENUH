@@ -159,7 +159,7 @@
             <ul class="slide-menu" role="menu">
                 <li class="slide">
                     <a href="#!" class="side-menu__item" role="menuitem">
-                        <span><i class="ri-shield-user-line"></i></span>
+                        <span><i class="ri-group-line"></i></span>
                         <span class="side-menu__label" data-lang="hr-level-2-2">Usuarios</span>
                         <i class="ri-arrow-down-s-line side-menu__angle"></i>
                     </a>
@@ -167,7 +167,7 @@
                     <ul class="slide-menu" role="menu">
                         <li class="slide">
                             <a href="{{ route('usuarios.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">
-                                <i class="ri-key-2-line"></i>
+                                <i class="ri-shield-user-line"></i>
                                 Gestionar
                             </a>
                         </li>
@@ -185,7 +185,7 @@
                         <li class="slide">
                             <a href="{{ route('niveles.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">
                                 <i class="ri-shield-cross-line"></i>
-                                Nuevo
+                                Gestionar
                             </a>
                         </li>
                     </ul>
@@ -217,24 +217,31 @@
                     <i class="ri-arrow-down-s-line side-menu__angle"></i>
                 </a>
                 <ul class="slide-menu" role="menu">
-                    <li class="slide">
-                        <a href="{{ route('servicios.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">
-                            <i class="ri-heart-add-line"></i>
-                            Añadir
-                        </a>
-                    </li>
-                    <li class="slide">
-                        <a href="{{ route('hospital-floor-services.edit') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">
-                            <i class="ri-link-unlink-m"></i>
-                            Asignar Servicios
-                        </a>
-                    </li>
+
+
+
+
                     <li class="slide">
                         <a href="{{ route('beds.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">
                             <i class="ri-hotel-bed-line"></i>
                             Camas
                         </a>
                     </li>
+
+                    <li class="slide">
+                        <a href="{{ route('hospital-floor-services.edit') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">
+                            <i class="ri-link-unlink-m"></i>
+                            Vincular
+                        </a>
+                    </li>
+
+                    <li class="slide">
+                        <a href="{{ route('servicios.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">
+                            <i class="ri-heart-add-line"></i>
+                            Servicios
+                        </a>
+                    </li>
+
                 </ul>
             </li>
 
@@ -246,17 +253,19 @@
                 </a>
                 <ul class="slide-menu" role="menu">
                     <li class="slide">
-                        <a href="{{ route('niveles.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">
-                            <i class="ri-building-line"></i>
-                            Añadir
-                        </a>
-                    </li>
-                    <li class="slide">
                         <a href="{{ route('hospital-floors.edit') }}" class="side-menu__item" role="menuitem" data-lang="hr-vector-maps">
                             <i class="ri-link-unlink-m"></i>
-                            Asignar
+                            Vincular
                         </a>
                     </li>
+
+                    <li class="slide">
+                        <a href="{{ route('niveles.index') }}" class="side-menu__item" role="menuitem" data-lang="hr-layout-two-column">
+                            <i class="ri-building-line"></i>
+                            Plantas
+                        </a>
+                    </li>
+
                 </ul>
             </li>
         </ul>

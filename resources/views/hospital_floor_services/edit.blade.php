@@ -2,7 +2,7 @@
 
 @section('title', 'SIGENUH')
 
-@section('sub-title', 'Hospitales -> Selección de Servicios por plantas ')
+@section('sub-title', 'Hospitales -> Servicios -> Asignar servicios a plantas')
 @section('pagetitle', 'Inicio')
 @section('buttonTitle', 'Share')
 
@@ -16,7 +16,7 @@
         <div class="col-12 col-lg-6">
             <div class="card h-100 mb-0">
                 <div class="card-header">
-                    <h5 class="card-title mb-0">Selección de Servicios por plantas</h5>
+                    <h5 class="card-title mb-0">Asignar servicios a plantas</h5>
                 </div>
                 <div class="card-body">
                     @if(session('success'))

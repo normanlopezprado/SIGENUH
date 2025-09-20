@@ -15,6 +15,7 @@
     <table class="table table-striped mb-0">
       <thead>
         <tr>
+          <th>Avatar</th>
           <th>Nombre</th>
           <th>Usuario</th>
           <th>Email</th>
@@ -28,6 +29,7 @@
       <tbody>
       @forelse($users as $u)
         <tr>
+          <td><img src="{{ $u->avatar_url }}" class="rounded-circle" style="width:36px;height:36px;object-fit:cover;"></td>
           <td>{{ $u->name }}</td>
           <td>{{ $u->user }}</td>
           <td>{{ $u->email }}</td>

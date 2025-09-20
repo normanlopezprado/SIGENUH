@@ -11,14 +11,18 @@ class User extends Authenticatable
     use Notifiable;
 
     protected $fillable = [
+        'id',
         'name',
         'user',
+        'avatar',
         'email',
         'email_verified_at',
         'hospital_selected',
         'password',
     ];
 
+    public $incrementing = false;
+    protected $keyType = 'string';
     protected $hidden = ['password', 'remember_token'];
 
     protected $casts = [
@@ -27,10 +31,28 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    protected static function booted()
+    {
+        static::creating(function ($model) {
+            if (empty($model->id)) {
+                $model->id = (string) \Illuminate\Support\Str::uuid();
+            }
+        });
+    }
+
     public function hospital()
     {
         return $this->belongsTo(\App\Models\Hospital::class, 'hospital_selected');
     }
+
+   public function getAvatarUrlAttribute(): string
+{
+    return $this->avatar
+        ? asset('storage/'.$this->avatar)   // igual que Hospital::getLogoUrlAttribute()
+        : asset('storage/avatars/default.jpg'); // pon un placeholder si quieres
+}
+
+
 
     /**
      * Genera el "base username" siguiendo tu regla:

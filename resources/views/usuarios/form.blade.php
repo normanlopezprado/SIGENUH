@@ -16,6 +16,20 @@
       </div>
 
         <div class="card-body">
+            {{-- Avatar --}}
+            <div class="mb-3">
+            <label for="avatar" class="form-label">Avatar</label>
+            <input type="file" class="form-control @error('avatar') is-invalid @enderror" id="avatar" name="avatar" accept="image/*">
+            @error('avatar')<div class="invalid-feedback">{{ $message }}</div>@enderror
+
+            @if(!empty($usuario?->avatar_url))
+                <div class="mt-2 d-flex align-items-center gap-3">
+                <img src="{{ $usuario->avatar_url ?? 'avatar/default.jpg' }}" alt="Avatar actual"
+                    class="rounded-circle" style="width:56px;height:56px;object-fit:cover;">
+                <small class="text-muted">Imagen actual</small>
+                </div>
+            @endif
+            </div>
 
             {{-- Nombre --}}
             <div class="form-floating mb-3">

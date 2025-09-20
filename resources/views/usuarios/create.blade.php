@@ -11,7 +11,7 @@
 @endsection
 
 @section('content')
-    <form method="POST" action="{{ route('usuarios.store') }}">
+    <form method="POST" action="{{ route('usuarios.store') }}" enctype="multipart/form-data">
         @csrf
         @include('usuarios.form', ['usuario' => new \App\Models\User()])
     </form>
@@ -23,8 +23,8 @@
     <script type="module" src="{{ asset('assets/js/app.js') }}"></script>
 
     <script src="{{ asset('assets/libs/air-datepicker/air-datepicker.js') }}"></script>
-  <script src="{{ asset('assets/js/form/form-layout.init.js') }}"></script>
-  <script type="module" src="{{ asset('assets/js/app.js') }}"></script>
+    <script src="{{ asset('assets/js/form/form-layout.init.js') }}"></script>
+    <script type="module" src="{{ asset('assets/js/app.js') }}"></script>
 
   <script>
   document.addEventListener("DOMContentLoaded", function() {

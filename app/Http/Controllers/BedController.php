@@ -6,15 +6,33 @@ use App\Models\Bed;
 use App\Models\HospitalFloorService;
 use App\Models\Service;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 
 class BedController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
-    public function index()
+    public function index(Request $request)
     {
-        $beds = Bed::with('hospitalFloorService')->latest()->get();
+        $hospitalId = $request->user()->hospital_selected;
+
+        if (!$hospitalId) {
+            return redirect()->route('dashboard')
+                ->with('warning', 'Selecciona un hospital antes de ver las camas.');
+        }
+
+        $beds = Bed::with([
+            'hospitalFloorService.service',
+            'hospitalFloorService.hospitalFloor.hospital',
+            'hospitalFloorService.hospitalFloor.nivel',
+        ])
+            ->whereHas('hospitalFloorService.hospitalFloor', function ($q) use ($hospitalId) {
+                $q->where('hospital_id', $hospitalId);
+            })
+            ->latest()
+            ->get() ;
+
         return view('beds.index', compact('beds'));
     }
 
@@ -40,16 +58,24 @@ class BedController extends Controller
      */
     public function store(Request $request)
     {
+        $hospitalId = $request->user()->hospital_selected;
+        if (!$hospitalId) {
+            return redirect()->route('dashboard')
+                ->with('warning', 'Selecciona un hospital antes de crear una cama.');
+        }
+        $allowedIds = HospitalFloorService::whereHas('hospitalFloor', fn($q) => $q->where('hospital_id', $hospitalId))
+            ->pluck('id')->toArray();
+
         $data = $request->validate([
-            'hospital_floor_service_id' => ['required','uuid','exists:hospital_floor_services,id'],
             'code'   => ['required','string','max:50','unique:beds,code'],
-            'status' => ['required','in:Disponible,Ocupada'],
+            'status' => ['required','in:Disponible,Ocupada,Mantenimiento'],
             'notes'  => ['nullable','string'],
+            'hospital_floor_service_id' => ['required','uuid', Rule::in($allowedIds)],
         ]);
+
         Bed::create($data);
 
-        return redirect()->route('beds.index')
-            ->with('success', 'Cama creada correctamente ✅');
+        return redirect()->route('beds.index')->with('success','Cama creada correctamente.');
     }
 
     /**
@@ -63,10 +89,20 @@ class BedController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Bed $bed)
+    public function edit(Request $request, Bed $bed)
     {
-        $services = HospitalFloorService::all();
-        return view('beds.edit', compact('bed', 'services'));
+        $hospitalId = $request->user()->hospital_selected;
+        if (!$hospitalId) {
+            return redirect()->route('dashboard')
+                ->with('warning', 'Selecciona un hospital antes de editar camas.');
+        }
+
+        $hfs = HospitalFloorService::with(['service', 'hospitalFloor.nivel'])
+            ->whereHas('hospitalFloor', fn($q) => $q->where('hospital_id', $hospitalId))
+            ->orderBy(Service::select('name')->whereColumn('services.id', 'hospital_floor_services.service_id'))
+            ->get();
+
+        return view('beds.edit', compact('bed','hfs'));
     }
 
     /**
@@ -74,17 +110,25 @@ class BedController extends Controller
      */
     public function update(Request $request, Bed $bed)
     {
+        $hospitalId = $request->user()->hospital_selected;
+        if (!$hospitalId) {
+            return redirect()->route('dashboard')
+                ->with('warning', 'Selecciona un hospital antes de editar camas.');
+        }
+
+        $allowedIds = HospitalFloorService::whereHas('hospitalFloor', fn($q) => $q->where('hospital_id', $hospitalId))
+            ->pluck('id')->toArray();
+
         $data = $request->validate([
-            'code'   => 'required|string|max:50|unique:beds,code,' . $bed->id . ',id',
-            'status' => 'required|in:Disponible,Ocupada',
-            'notes'  => 'nullable|string',
-            'hospital_floor_service_id' => 'required|uuid|exists:hospital_floor_services,id',
+            'code'   => ['required','string','max:50','unique:beds,code,'.$bed->id.',id'],
+            'status' => ['required','in:Disponible,Ocupada,Mantenimiento'],
+            'notes'  => ['nullable','string'],
+            'hospital_floor_service_id' => ['required','uuid', Rule::in($allowedIds)],
         ]);
 
         $bed->update($data);
 
-        return redirect()->route('beds.index')
-            ->with('success', 'Cama actualizada correctamente ✏️');
+        return redirect()->route('beds.index')->with('success','Cama actualizada correctamente.');
     }
 
     /**

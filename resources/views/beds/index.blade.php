@@ -32,14 +32,15 @@
                             <td>{{ $bed->code }}</td>
                             <td>{{ $bed->status }}</td>
                             <td>{{ $bed->notes }}</td>
-                            <td>{{ $bed->hospitalFloorService?->id }}</td>
                             <td>
-                                <a href="{{ route('beds.edit', $bed) }}" class="btn btn-warning btn-sm">✏️ Editar</a>
-                                <form action="{{ route('beds.destroy', $bed) }}" method="POST" style="display:inline-block;">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button class="btn btn-danger btn-sm" onclick="return confirm('¿Eliminar cama?')">🗑️ Eliminar</button>
-                                </form>
+                                {{ $bed->hospitalFloorService?->hospitalFloor->hospital->name }}
+                                ->
+                                {{ $bed->hospitalFloorService?->hospitalFloor->nivel->name }}
+                                ->
+                                {{ $bed->hospitalFloorService?->service->name  }}
+                            </td>
+                            <td>
+                                <a href="{{ route('beds.edit', $bed) }}" class="btn btn-sm btn-warning">Editar</a>
                             </td>
                         </tr>
                     @empty

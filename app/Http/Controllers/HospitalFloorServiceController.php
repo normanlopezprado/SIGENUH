@@ -68,7 +68,7 @@ class HospitalFloorServiceController extends Controller
         $floor = HospitalFloor::where('id', $data['floor'])
             ->where('hospital_id', $hospitalId)
             ->firstOrFail();
-        
+
         $inUseElsewhere = Service::whereHas('hospitalFloors', function ($q) use ($hospitalId, $floor) {
             $q->where('hospital_id', $hospitalId)
                 ->where('hospital_floors.id', '!=', $floor->id);

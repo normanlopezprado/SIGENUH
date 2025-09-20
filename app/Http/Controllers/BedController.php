@@ -67,7 +67,7 @@ class BedController extends Controller
             ->pluck('id')->toArray();
 
         $data = $request->validate([
-            'code'   => ['required','string','max:50','unique:beds,code'],
+            'code'   => ['required','string','max:50'],
             'status' => ['required','in:Disponible,Ocupada,Mantenimiento'],
             'notes'  => ['nullable','string'],
             'hospital_floor_service_id' => ['required','uuid', Rule::in($allowedIds)],
@@ -116,11 +116,12 @@ class BedController extends Controller
                 ->with('warning', 'Selecciona un hospital antes de editar camas.');
         }
 
-        $allowedIds = HospitalFloorService::whereHas('hospitalFloor', fn($q) => $q->where('hospital_id', $hospitalId))
-            ->pluck('id')->toArray();
+        $allowedIds = HospitalFloorService::whereHas('hospitalFloor', fn($q) =>
+        $q->where('hospital_id', $hospitalId)
+        )->pluck('id')->toArray();
 
         $data = $request->validate([
-            'code'   => ['required','string','max:50','unique:beds,code,'.$bed->id.',id'],
+            'code'   => ['required','string','max:50'],
             'status' => ['required','in:Disponible,Ocupada,Mantenimiento'],
             'notes'  => ['nullable','string'],
             'hospital_floor_service_id' => ['required','uuid', Rule::in($allowedIds)],

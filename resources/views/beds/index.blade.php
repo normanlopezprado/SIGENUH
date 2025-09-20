@@ -19,7 +19,7 @@
                 <table class="data-table-basic table-hover align-middle table table-nowrap w-100">
                     <thead class="bg-light bg-opacity-30">
                     <tr>
-                        <th>Código</th>
+                        <th>Número</th>
                         <th>Estado</th>
                         <th>Notas</th>
                         <th>Servicio</th>
